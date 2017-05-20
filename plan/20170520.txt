@@ -1,0 +1,9 @@
+Plan update:
+
+we need to add text to the boxes for the different sorts, a heading
+
+we need to plan the transition from sort choice to the actual 
+visualization (3 states exist currently to determine which one is chosen)
+
+A good way to start the visualizations is by using background first
+A processing thread said: "Function background() is the common procedure to clear whole canvas!" 

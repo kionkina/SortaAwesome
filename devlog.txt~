@@ -13,9 +13,7 @@ OBSTACLES OVERCOME
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
-- on the homepage, when the cursor is over
-the boxes the change in color is a tad 
-bit off. 
+
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -33,12 +31,6 @@ tales of wisdom gained...
 
 2017-05-20
 --------------------------------------------------------------
-Karina:
-- setup(), draw(), update(), mousePressed(), OverRect(x, y)
-- added 3 rectangles for sort selections
-- color changes when mouse is on the boxes --> update(), overRect() and draw()
-- mousePressed() changes the state to 0,1,2 which can be used 
-for the sort visualizations (determines which sort is shown)
 
 ==============================================================
 

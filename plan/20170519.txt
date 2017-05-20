@@ -1,0 +1,14 @@
+Sorta Awesome
+David Frid
+Karina Ionkina
+Mark Shafran
+
+
+Plan 2017-05-19
+
+- Create a homepage in which the clicked boxes lead to the respective animation
+- We decided to use vertically oriented ellipses of the same width to
+represent the arrays (major axis indicating size, same minor axis for all)
+- The size of the major axis will be scaled to fit -- the largest number in the
+array (tracked with a global variable) will determine the scale.
+

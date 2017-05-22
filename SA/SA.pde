@@ -21,48 +21,57 @@ fill(0, 50, 153);
   rect3Color = color(50);
   fillcolor = color(255);
  
- //locates and centers the rectangles
+ //locates 
   rect1X = (width - recW)/2;
   rect1Y = (height - recH*3 + 20*2) / 2  ;
   rect2X = rect1X;
   rect2Y = rect1Y + recH +  20;
   rect3X = rect2X;
   rect3Y = rect2Y + recH + 20;
-  
- 
+  System.out.println(rect1Y);
 }
 
 void draw() {
   update();
-
+ 
   
   if (Over1) {
     fill(fillcolor);
+    text("Bubble Sort",rect1X + recW/2, rect1Y + recH/2);
   } else {
     fill(rectColor);
+   
+       text("Bubble Sort",rect1X + recW/2, rect1Y + recH/2);
   }
   //stroke(255);
- text("Bubble Sort",rect1X + recH/2, rect1Y + recW/2);
-  rect(rect1X, rect1Y, recW, recH);
- text("Bubble Sort",rect1X + recH/2, rect1Y + recW/2);
+ rect(rect1X, rect1Y, recW, recH);
+ 
 
 
   if (Over2) {
     fill(fillcolor);
+       text("Bubble Sort",rect2X + recW/2, rect2Y + recH/2);
+
   } else {
     fill(rect2Color);
+       text("Bubble Sort",rect2X + recW/2, rect2Y + recH/2);
   }
   //stroke(255);
   rect(rect2X, rect2Y, recW, recH);
   
   if (Over3) {
     fill(fillcolor);
+       text("Bubble Sort",rect3X + recW/2, rect3Y + recH/2);
   } else {
     fill(rect3Color);
+    text("Bubble Sort",rect3X + recW/2, rect3Y + recH/2);
   }
   stroke(255);
   rect(rect3X, rect3Y, recW, recH);
   
+
+
+
   //stroke(0);
 }
 
@@ -91,19 +100,19 @@ void update() {
 
 void mousePressed() {
   if (Over1) {
-    state = 0;
-  }
-  if (Over2) {
     state = 1;
   }
-  if (Over3) {
+  if (Over2) {
     state = 2;
+  }
+  if (Over3) {
+    state = 3;
   }
 }
 //returns true if the mouse is on the respective rectangle
 boolean OverRect(int x, int y) {
    return mouseX >= x && mouseX <= x+recW &&
-       mouseY <= y && mouseY <= y+recH;
+       mouseY  >= y && mouseY <= y +  recH;
 }
 
 

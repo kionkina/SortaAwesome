@@ -11,7 +11,10 @@ boolean Over3 = false;
 int state; // determines which sort will be demonstrated
 
 void setup(){
- 
+background(color(0));
+textSize(32);
+text("Sorta Aweseome Visualizer", 120, 100); 
+fill(0, 50, 153);
   size(600, 600);
   rectColor = color(50);
   rect2Color = color(50);
@@ -25,12 +28,13 @@ void setup(){
   rect2Y = rect1Y + recH +  20;
   rect3X = rect2X;
   rect3Y = rect2Y + recH + 20;
-
+  
+ 
 }
 
 void draw() {
   update();
-  background(color(0));
+
   
   if (Over1) {
     fill(fillcolor);
@@ -38,8 +42,11 @@ void draw() {
     fill(rectColor);
   }
   //stroke(255);
+ text("Bubble Sort",rect1X + recH/2, rect1Y + recW/2);
   rect(rect1X, rect1Y, recW, recH);
-  
+ text("Bubble Sort",rect1X + recH/2, rect1Y + recW/2);
+
+
   if (Over2) {
     fill(fillcolor);
   } else {
@@ -84,19 +91,19 @@ void update() {
 
 void mousePressed() {
   if (Over1) {
-    state = 1;
+    state = 0;
   }
   if (Over2) {
-    state = 3;
+    state = 1;
   }
   if (Over3) {
-    state = 3;
+    state = 2;
   }
 }
 //returns true if the mouse is on the respective rectangle
 boolean OverRect(int x, int y) {
-   return mouseX > x && mouseX < x+recW &&
-       mouseY < y && mouseY < y+recH;
+   return mouseX >= x && mouseX <= x+recW &&
+       mouseY <= y && mouseY <= y+recH;
 }
 
 

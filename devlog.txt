@@ -20,6 +20,11 @@ bit off.
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo! 
+2017-05-22
+DISCOVERY: dont put background(color(x))
+in the draw() method because it'll cover the
+text in the setup() method and refresh each
+time...
 
 
 MID-DEVELOPMENT DESIGN CHANGES

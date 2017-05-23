@@ -1,0 +1,18 @@
+Plan update for 2017-05-23:
+Priority #1:
+  -begin linking buttons on home page to sort visualizations, or, temporarily, the states that will trigger 
+  each sort visualization (core functionality)
+  -begin work on sort visualizations in separate files that will then be utilized in main driver (core functionality)
+    -Prior to starting, we should decide how we will be visualizing each sort for everyone to be able to be on the same page
+    -Separate files are ESSENTIAL to prevent breaking any working code
+    -One sort can be delegated to each member so that work can be done simultaneously
+      --> Since files are separate, sorts do not interfere with one another
+    
+Priority #2 (Bug Fixing): (can be delegated to one person)
+  -fix bug where text does not appear in the box (not essential for core functionality but important for user's understanding)
+  
+Previous Goals We Have Accomplished So Far:
+  -Home Screen appearance almost ideal
+  -Each button on home screen changes color to indicate hovering over
+  -Clicking on a button changes the state
+  

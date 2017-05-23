@@ -47,6 +47,14 @@ for the sort visualizations (determines which sort is shown)
 
 ==============================================================
 
+2017-05-22
+--------------------------------------------------------------
+Karina, David, Mark:
+-In class, on Karina's laptop, fixed a couple bugs with start menu code
+  -Rectangles now change color correctly when moouse is inside box
+  -Began to fix bug where text would not show up in the boxes
+==============================================================
+
 2017-05-20
 --------------------------------------------------------------
 

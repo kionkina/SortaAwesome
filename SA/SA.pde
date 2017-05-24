@@ -36,10 +36,10 @@ void draw() {
  
   
   if (Over1) {
-    fill(fillcolor);
-    text("Bubble Sort",rect1X + recW/2, rect1Y + recH/2);
+    //fill(fillcolor);
+    makeText("Bubble Sort",rect1X + recW/2, rect1Y + recH/2, 100);
   } else {
-    fill(rectColor);
+    //fill(rectColor);
    
        text("Bubble Sort",rect1X + recW/2, rect1Y + recH/2);
   }
@@ -49,30 +49,39 @@ void draw() {
 
 
   if (Over2) {
-    fill(fillcolor);
+    //fill(fillcolor);
        text("Bubble Sort",rect2X + recW/2, rect2Y + recH/2);
 
   } else {
-    fill(rect2Color);
+    //fill(rect2Color);
        text("Bubble Sort",rect2X + recW/2, rect2Y + recH/2);
   }
   //stroke(255);
   rect(rect2X, rect2Y, recW, recH);
   
   if (Over3) {
-    fill(fillcolor);
-       text("Bubble Sort",rect3X + recW/2, rect3Y + recH/2);
+     makeText("Bubble Sort",rect3X + recW/2, rect3Y + recH/2, 0);
+     //fill(fillcolor);
+    rect(rect3X, rect3Y, recW, recH);
+   
+   
+       //text("Bubble Sort",rect3X + recW/2, rect3Y + recH/2);
   } else {
-    fill(rect3Color);
-    text("Bubble Sort",rect3X + recW/2, rect3Y + recH/2);
+    
+    makeText("Bubble Sort",rect3X + recW/2, rect3Y + recH/2, 0);
+    //fill(rect3Color);
+    rect(rect3X, rect3Y, recW, recH);
+   
   }
   stroke(255);
-  rect(rect3X, rect3Y, recW, recH);
   
-
-
-
+ 
   //stroke(0);
+}
+
+void makeText(String s, int x, int y, int col) {
+    text("Bubble Sort",rect3X + recW/2, rect3Y + recH/2);
+    fill(color(col));
 }
 
 void update() {

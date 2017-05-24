@@ -30,58 +30,63 @@ fill(0, 50, 153);
   rect3Y = rect2Y + recH + 20;
   System.out.println(rect1Y);
 }
-
-void draw() {
-  update();
  
+ 
+void draw() {
+
+  update();
   
+
   if (Over1) {
-    //fill(fillcolor);
-    makeText("Bubble Sort",rect1X + recW/2, rect1Y + recH/2, 100);
+ 
+    fill(fillcolor);
+ 
   } else {
-    //fill(rectColor);
-   
-       text("Bubble Sort",rect1X + recW/2, rect1Y + recH/2);
+  
+        fill(rectColor);
   }
-  //stroke(255);
- rect(rect1X, rect1Y, recW, recH);
+  stroke(255);
+  rect(rect1X, rect1Y, recW, recH);
+  
  
 
 
   if (Over2) {
-    //fill(fillcolor);
-       text("Bubble Sort",rect2X + recW/2, rect2Y + recH/2);
+
+       fill(fillcolor);
 
   } else {
-    //fill(rect2Color);
-       text("Bubble Sort",rect2X + recW/2, rect2Y + recH/2);
+
+        fill(rect2Color);
   }
-  //stroke(255);
+  stroke(255);
   rect(rect2X, rect2Y, recW, recH);
   
   if (Over3) {
-     makeText("Bubble Sort",rect3X + recW/2, rect3Y + recH/2, 0);
-     //fill(fillcolor);
-    rect(rect3X, rect3Y, recW, recH);
-   
-   
-       //text("Bubble Sort",rect3X + recW/2, rect3Y + recH/2);
+
+     fill(fillcolor);
+
   } else {
     
-    makeText("Bubble Sort",rect3X + recW/2, rect3Y + recH/2, 0);
-    //fill(rect3Color);
-    rect(rect3X, rect3Y, recW, recH);
-   
+    
+    fill(rect3Color);   
   }
   stroke(255);
-  
+  rect(rect3X, rect3Y, recW, recH);
+      
+      
+ makeText("Bubble Sort",rect1X + recW/4 - 10, rect1Y + recH/2 + 10, 0);
+
+ makeText("Selection Sort",rect2X + recW/4 - 10, rect2Y + recH/2 + 10, 0);
+ makeText("Insertion Sort",rect3X + recW/4 - 10 , rect3Y + recH/2 + 10, 0);
+         
  
   //stroke(0);
 }
 
 void makeText(String s, int x, int y, int col) {
-    text("Bubble Sort",rect3X + recW/2, rect3Y + recH/2);
-    fill(color(col));
+   fill(color(col));
+    text(s, x, y);
 }
 
 void update() {

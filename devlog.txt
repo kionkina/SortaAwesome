@@ -55,7 +55,21 @@ Karina, David, Mark:
   -Began to fix bug where text would not show up in the boxes
 ==============================================================
 
-2017-05-20
+2017-05-23
 --------------------------------------------------------------
+Karina, David, Mark:
+-In class, we worked on our flow chart
+-Brainstormed UML content
+==============================================================
 
+2017-05-24
+--------------------------------------------------------------
+Karina, David, Mark:
+-In class, on Karina's laptop, fixed a couple bugs with the 
+title screen
+
+-We created interface ArrayStructure
+
+-Created BubbleSort InsertionSort and SelectionSort classes
+based on our UML
 ==============================================================

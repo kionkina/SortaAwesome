@@ -8,6 +8,8 @@ pd 05
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
 OBSTACLES OVERCOME
+~On the title page we couldnt get text to 
+appear over a rectangle but it is all good.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 UNRESOLVED ISSUES

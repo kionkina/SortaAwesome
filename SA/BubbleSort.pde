@@ -18,7 +18,7 @@ public class BubbleSort implements ArrayStructure {
       for ( int i = 0; i < arr.length-1; i++ ) {
 
         //if element at i > element at i+1, swap
-        if ( arr[i].compareTo(arr[i+1] ) > 0 ) {
+        if ( arr[i] > arr[i+1] ) {
           int temp = arr[i];
           arr[i] = arr[i+1];
           arr[i+1] = temp;

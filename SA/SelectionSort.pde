@@ -20,7 +20,7 @@ public class SelectionSort implements ArrayStructure {
       for ( int i = 1; i <= pass; i++ ) {
         //System.out.println( "maxPos: " + maxPos );//diag
         //System.out.println( data );//diag
-        if ( arr[i].compareTo( arr[maxPos] ) > 0 )
+        if ( arr[i] >  arr[maxPos] ) 
           maxPos = i;
       }
       int temp = arr[maxPos];

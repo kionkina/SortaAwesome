@@ -10,18 +10,18 @@ boolean Over2 = false;
 boolean Over3 = false;
 int state; // determines which sort will be demonstrated
 
-void setup(){
-background(color(0));
-textSize(32);
-text("Sorta Aweseome Visualizer", 120, 100); 
-fill(0, 50, 153);
+void setup() {
+  background(color(0));
+  textSize(32);
+  text("Sorta Aweseome Visualizer", 120, 100); 
+  fill(0, 50, 153);
   size(600, 600);
   rectColor = color(50);
   rect2Color = color(50);
   rect3Color = color(50);
   fillcolor = color(255);
- 
- //locates 
+
+  //locates 
   rect1X = (width - recW)/2;
   rect1Y = (height - recH*3 + 20*2) / 2  ;
   rect2X = rect1X;
@@ -30,107 +30,153 @@ fill(0, 50, 153);
   rect3Y = rect2Y + recH + 20;
   System.out.println(rect1Y);
 }
- 
- 
+
+
 void draw() {
 
-  update();
-  
+  //
+  if (state == 0) {
+    update();
 
-  if (Over1) {
- 
+
+    if (Over1) {
+
+      fill(fillcolor);
+    } else {
+
+      fill(rectColor);
+    }
+    stroke(255);
+    rect(rect1X, rect1Y, recW, recH);
+
+    if (Over2) {
+
+      fill(fillcolor);
+    } else {
+
+      fill(rect2Color);
+    }
+    stroke(255);
+    rect(rect2X, rect2Y, recW, recH);
+
+    if (Over3) {
+
+      fill(fillcolor);
+    } else {
+
+
+      fill(rect3Color);
+    }
+    stroke(255);
+    rect(rect3X, rect3Y, recW, recH);
+
+
+    makeText("Bubble Sort", rect1X + recW/4 - 10, rect1Y + recH/2 + 10, 0);
+    makeText("Selection Sort", rect2X + recW/4 - 10, rect2Y + recH/2 + 10, 0);
+    makeText("Insertion Sort", rect3X + recW/4 - 10, rect3Y + recH/2 + 10, 0);
+  }
+  if (state == 1 || state == 4 || state == 7) {
+    background(0);
     fill(fillcolor);
- 
-  } else {
-  
-        fill(rectColor);
-  }
-  stroke(255);
-  rect(rect1X, rect1Y, recW, recH);
-  
- 
-
-
-  if (Over2) {
-
-       fill(fillcolor);
-
-  } else {
-
-        fill(rect2Color);
-  }
-  stroke(255);
-  rect(rect2X, rect2Y, recW, recH);
-  
-  if (Over3) {
-
-     fill(fillcolor);
-
-  } else {
+    rect((width - recW)/2, (height - (2*recH + recH/2))/2, recW, recH);
+    fill(fillcolor);
+    rect((width - recW)/2, (height - (2*recH + recH/2))/2 + 3*recH/2, recW, recH);
     
     
-    fill(rect3Color);   
-  }
-  stroke(255);
-  rect(rect3X, rect3Y, recW, recH);
-      
-      
- makeText("Bubble Sort",rect1X + recW/4 - 10, rect1Y + recH/2 + 10, 0);
+    
+     update();
 
- makeText("Selection Sort",rect2X + recW/4 - 10, rect2Y + recH/2 + 10, 0);
- makeText("Insertion Sort",rect3X + recW/4 - 10 , rect3Y + recH/2 + 10, 0);
-         
- 
+
+    if (Over1) {
+
+      fill(fillcolor);
+    } else {
+
+      fill(rectColor);
+    }
+    stroke(255);
+    rect(rect1X, rect1Y, recW, recH);
+
+    if (Over2) {
+
+      fill(fillcolor);
+    } else {
+
+      fill(rect2Color);
+    }
+    stroke(255);
+    rect(rect2X, rect2Y, recW, recH);
+
+    if (Over3) {
+
+      fill(fillcolor);
+    } else {
+
+
+      fill(rect3Color);
+    }
+    stroke(255);
+    rect(rect3X, rect3Y, recW, recH);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    makeText("Small Scale", (width - recW)/2 + recW/4, (height - (2*recH + recH/2))/2 + recH/2, 0);
+    makeText("Large Scale", (width - recW)/2 + recW/4, (height - (2*recH + recH/2))/2 + 3*recH/2 + recH/2, 0);
+  }
   //stroke(0);
 }
 
 void makeText(String s, int x, int y, int col) {
-   fill(color(col));
-    text(s, x, y);
+  fill(color(col));
+  text(s, x, y);
 }
 
 void update() {
+if (state == 0){
   if ( OverRect(rect1X, rect1Y) ) {
     Over1 = true;
     Over2 = false;
     Over3 = false;
-  } 
-  else if ( OverRect(rect2X, rect2Y) ) {
+  } else if ( OverRect(rect2X, rect2Y) ) {
     Over2 = true;
     Over1 = false;
     Over3 = false;
-  }
-  else if ( OverRect(rect3X, rect3Y) ) {
+  } else if ( OverRect(rect3X, rect3Y) ) {
     Over3 = true;
     Over2 = false;
     Over1 = false;
-  } 
-  else {
+  } else {
     Over1 = false;
     Over2 = false;
     Over3 = false;
   }
 }
+  
+  if Over(
+  
+  
+}
 
-void mousePressed() {
+void mouseClicked() {
   if (Over1) {
     state = 1;
   }
   if (Over2) {
-    state = 2;
+    state = 4;
   }
   if (Over3) {
-    state = 3;
+    state = 7;
   }
 }
 //returns true if the mouse is on the respective rectangle
 boolean OverRect(int x, int y) {
-   return mouseX >= x && mouseX <= x+recW &&
-       mouseY  >= y && mouseY <= y +  recH;
+  return mouseX >= x && mouseX <= x+recW &&
+    mouseY  >= y && mouseY <= y +  recH;
 }
-
-
-  
-  
-  
-  

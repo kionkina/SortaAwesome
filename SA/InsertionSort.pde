@@ -1,8 +1,11 @@
 public class InsertionSort implements ArrayStructure {
 
+  boolean small; 
+  
   public int[] arr;
 
   public void display() {
+    
   }
 
 
@@ -22,7 +25,7 @@ public class InsertionSort implements ArrayStructure {
 
         // "walk" the current item to where it belongs
         // by swapping adjacent items
-        if ( arr[i].compareTo( arr[i-1] ) < 0 ) {
+        if ( arr[i] <  arr[i-1] ) {
           //diag:
           System.out.println( "swap indices "+(i-1)+" & "+i+"..." );
           int temp = arr[i];

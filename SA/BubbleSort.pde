@@ -19,10 +19,29 @@ public class BubbleSort implements ArrayStructure {
     }
   }
 
-  public void display() {
+  public void displayLarge() {
     for (int x = 0; x < arr.length; x++) {
       fill(275);
       rect(x, height - arr[x], 1, arr[x]);
+    }
+  }
+
+  public void setupSmall() {
+    int size = (int)(6+Math.random()*6);
+    arr = new int[size];
+    for (int i = 0; i < size; i++) {
+      int value = (int)(Math.random()*20);
+      arr[i] = value;
+    }
+  }
+
+  public void DisplaySmall() {
+    setupSmall();
+    int x = (width - arr.length*40)/2;
+    int y = height/2 - 20;
+    while(true){
+       rect(x,y,40,40);
+       x += 40;
     }
   }
 

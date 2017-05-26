@@ -138,7 +138,7 @@ void update() {
     }
     else {
       Over4 = false;
-      Over5 = true;
+      Over5 = false;
     }
   }
 }
@@ -153,6 +153,16 @@ void mouseClicked() {
   if (Over3) {
     state = 7;
   }
+
+  if (Over4){
+    state += 1;
+  }
+  
+  if (Over5){
+    state += 2;
+  }
+  
+  
 }
 //returns true if the mouse is on the respective rectangle
 boolean OverRect(int x, int y) {

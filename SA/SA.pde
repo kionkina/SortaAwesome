@@ -81,10 +81,9 @@ void draw() {
     rect((width - recW)/2, (height - (2*recH + recH/2))/2, recW, recH);
     fill(fillcolor);
     rect((width - recW)/2, (height - (2*recH + recH/2))/2 + 3*recH/2, recW, recH);
-    
-    
-    
-     update();
+
+
+    update();
 
 
     if (Over1) {
@@ -117,16 +116,16 @@ void draw() {
     }
     stroke(255);
     rect(rect3X, rect3Y, recW, recH);
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
     makeText("Small Scale", (width - recW)/2 + recW/4, (height - (2*recH + recH/2))/2 + recH/2, 0);
     makeText("Large Scale", (width - recW)/2 + recW/4, (height - (2*recH + recH/2))/2 + 3*recH/2 + recH/2, 0);
   }
@@ -139,29 +138,27 @@ void makeText(String s, int x, int y, int col) {
 }
 
 void update() {
-if (state == 0){
-  if ( OverRect(rect1X, rect1Y) ) {
-    Over1 = true;
-    Over2 = false;
-    Over3 = false;
-  } else if ( OverRect(rect2X, rect2Y) ) {
-    Over2 = true;
-    Over1 = false;
-    Over3 = false;
-  } else if ( OverRect(rect3X, rect3Y) ) {
-    Over3 = true;
-    Over2 = false;
-    Over1 = false;
-  } else {
-    Over1 = false;
-    Over2 = false;
-    Over3 = false;
+  if (state == 0) {
+    if ( OverRect(rect1X, rect1Y) ) {
+      Over1 = true;
+      Over2 = false;
+      Over3 = false;
+    } else if ( OverRect(rect2X, rect2Y) ) {
+      Over2 = true;
+      Over1 = false;
+      Over3 = false;
+    } else if ( OverRect(rect3X, rect3Y) ) {
+      Over3 = true;
+      Over2 = false;
+      Over1 = false;
+    } else {
+      Over1 = false;
+      Over2 = false;
+      Over3 = false;
+    }
   }
-}
-  
-  if Over(
-  
-  
+
+  // if Over(){
 }
 
 void mouseClicked() {

@@ -27,34 +27,34 @@ class rArr {
 
   void SelectionSortV() {
     int maxPos;
-    for (int pass = rawr.length -1; pass > 0; pass--) {
+    for (int pass = rawr.length-1; pass >= 0; pass--) {
       maxPos = 0;
-      for (int x = 1; x <= pass; x++) {
+      for (int x = 0; x <= pass; x++) {
         if (rawr[x].getHeight() > rawr[maxPos].getHeight() ) {
           maxPos = x;
           order.add(dupe(rawr));
-          count.add(maxPos);
+          count.add(x);
         }
-        
       }
       swap(rawr, pass, maxPos);
+    }
+    
+  }
+
+
+
+  void draw(int x) {
+    for (int i  = 0; i < order.get(x).length; i++) {
+      Rectangles r = order.get(x)[i];
+      r.draw(i*3, 3, count.get(x) == i);
     }
   }
 
 
 
-void draw(int x) {
-  for (int i  = 0; i < order.get(x).length; i++) {
-    Rectangles r = order.get(x)[i];
-    r.draw(i*3, 3, count.get(x) == i);
+  void swap( Rectangles[] roar, int a, int b) {
+    Rectangles temp = roar[a];
+    roar[a] = roar[b];
+    roar[b] = temp;
   }
-}
-
-
-
-void swap( Rectangles[] roar, int a, int b) {
-  Rectangles temp = roar[a];
-  roar[a] = roar[b];
-  roar[b] = temp;
-}
 } 

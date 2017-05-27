@@ -3,7 +3,7 @@ rArr rects;
 int[] arr;
 
 void setup() {
-  frameRate(300);
+  frameRate(60);
   counter = 0;
   size(600, 600);
   background(0);

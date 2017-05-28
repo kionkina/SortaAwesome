@@ -40,7 +40,7 @@ class rArr {
   void draw(int x) {
     for (int i  = 0; i < order.get(x).length; i++) {
       Rectangles r = order.get(x)[i];
-      r.draw(i*3, 3, count.get(x) == i);
+      r.draw(i*4, 4, count.get(x) == i);
     }
   }
 

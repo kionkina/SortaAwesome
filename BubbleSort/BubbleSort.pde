@@ -8,9 +8,9 @@ void setup() {
   size(600, 600);
   background(0);
   setArr();
-  Rectangles[] temp = new Rectangles[width/3];
+  Rectangles[] temp = new Rectangles[width/4];
   for (int x = 0; x < temp.length; x++) {
-    temp[x] = new Rectangles( x*3, height - arr[x], 3, arr[x], 255 );
+    temp[x] = new Rectangles( x*4, height - arr[x], 4, arr[x], 255 );
   }
   rects = new rArr( temp ); //
 }

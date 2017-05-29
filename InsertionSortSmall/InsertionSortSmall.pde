@@ -74,22 +74,12 @@ void draw() {
 
 
   //-----------------------------------comparisons-------------------------------------------------
-  stroke(0);
-  fill(165, 30, 225);
-  strokeWeight(1);
-  if (i > 0) {
-    rect(25 +(boxWidth + 3)*(i), width/2 - boxHeight/2 + 100, boxWidth, 10);
-    old = i;
-    rect(25 +(boxWidth + 3)*(i - 1), width/2 - boxHeight/2 + 100, boxWidth, 10);
-    fill(0);
-    rect(25 + (boxWidth + 3)*(old), width/2 - boxHeight/2 + 100, boxWidth, 10);
-    rect(25 +(boxWidth + 3)*(old - 1), width/2 - boxHeight/2 + 100, boxWidth, 10);
-  }
+ 
 
 
 
   //-------------------------parition maintenance-------------------------------------------------------------
-
+  noStroke();
   fill(225, 0, 0);
   rect(25 +boxWidth+(boxWidth + 3)*(partition), width/2 - boxHeight*2, 3, boxHeight*4);
   fill(0);
@@ -113,6 +103,7 @@ void draw() {
         i = partition;
       } else {
         i -= 1;
+        
       }
     }
   }

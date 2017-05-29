@@ -1,3 +1,4 @@
+# Sorta Awesome
 David Frid, Karina Ionkina, Mark Shafran
 # Sort Visualizer
 ## (Sorta Helpful for Future Thinkers)

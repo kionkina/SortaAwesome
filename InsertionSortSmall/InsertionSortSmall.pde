@@ -73,10 +73,6 @@ void draw() {
   System.out.println("partition = " + partition );
 
 
-  //-----------------------------------comparisons-------------------------------------------------
- 
-
-
 
   //-------------------------parition maintenance-------------------------------------------------------------
   noStroke();
@@ -130,40 +126,7 @@ void draw() {
 }
 
 void keyPressed() {
-  if (keyCode == DELETE) {
+  if (keyCode == RETURN) {
     setup();
   }
 }
-/*-----------------------------------------USE FOR SELECTION SORT----------------------------------------------------------
- if(swapping){
- if ( a == firstBox){
- fill(0);
- rect(25 + boxWidth*firstBox + firstBox*2, height/2 - boxHeight/2, boxWidth,boxHeight);
- rect(25 + boxWidth*secondBox + secondBox*2, height/2 - boxHeight/2, boxWidth,boxHeight);
- fill(50);
- rect(25 + boxWidth*a + a*2, 400, boxWidth, boxHeight);
- rect(25 + boxWidth*b + b*2, 150, boxWidth, boxHeight);
- a += 1;
- }
- if (a != secondBox + 1){
- fill(50);
- rect(25 + boxWidth*a + 2*a, 400, boxWidth,boxHeight);
- rect(25 + boxWidth*b + 2*b, 150, boxWidth,boxHeight);
- fill(0);
- rect(25 + boxWidth*(a - 1) + 2*(a - 1), 400, boxWidth,boxHeight); 
- rect(25 + boxWidth*(b + 1) + 2*(b + 1), 150, boxWidth,boxHeight); 
- a += 1; 
- b -= 1;
- }
- else{
- fill(0);
- rect(25 + boxWidth*(a-1) + 2*(a-1), 400, boxWidth,boxHeight);
- rect(25 + boxWidth*(b+1) + 2*(b+1), 150, boxWidth,boxHeight);
- fill(225);
- rect(25 + boxWidth*firstBox + firstBox*2, height/2 - boxHeight/2, boxWidth,boxHeight);
- rect(25 + boxWidth*secondBox + secondBox*2, height/2 - boxHeight/2, boxWidth,boxHeight);     
- }             
- swapping = false;
- // delay(10000);
- }
- */

@@ -48,7 +48,7 @@ void setArr() { // makes an array with randomized rectangle heights
 }
 
 void keyPressed() {
-  if (keyCode == DELETE) {
+  if (keyCode == 'R' || keyCode == 'r') {
     setup();
   }
 }

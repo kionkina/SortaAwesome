@@ -113,7 +113,7 @@ void setup() {
     text(Integer.toString(arr[p]), 25 + boxWidth*p + p*3, height/2 - boxHeight/2, boxWidth, boxHeight);
    }
  //-------------------------parition maintenance-------------------------------------------------------------
- }
+ 
   
 /*
   fill(0, 102, 204);
@@ -121,3 +121,10 @@ void setup() {
   fill(0);
   rect(25 +boxWidth+boxWidth + 3, width/2 - boxHeight*2, 3, boxHeight*4);
   */
+ }
+  void keyPressed() {
+  if (keyCode == 'R' || keyCode == 'r') {
+    setup();
+  }
+  }
+  

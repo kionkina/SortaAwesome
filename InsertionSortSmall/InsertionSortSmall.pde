@@ -37,7 +37,7 @@ void setup() {
     int toAdd = (int)(Math.random() * width);
     arr[i] = toAdd;
     fill(225);
-    rect(25 + boxWidth*i + i*2, height/2 - boxHeight/2, boxWidth, boxHeight);
+    rect(25 + boxWidth*i + i*3, height/2 - boxHeight/2, boxWidth, boxHeight);
     fill(0);
     textSize(15);
     text(Integer.toString(toAdd), 25 + boxWidth*i + i*3, height/2 - boxHeight/2, boxWidth, boxHeight);
@@ -107,26 +107,37 @@ void draw() {
 
   //-----------------------------------------SWAP----------------------------------------------------------
   if (swapping) {
-    stroke(253, 130, 0);
-    strokeWeight(2);
-    fill(225);
+    //stroke(253, 130, 0);
+    //strokeWeight(2);
+    fill(225, 139, 225);
     rect(25 + boxWidth*firstBox + firstBox*3, height/2 - boxHeight/2, boxWidth, boxHeight);
     fill(0);
     text(Integer.toString(arr[firstBox]), 25 + boxWidth*firstBox + firstBox*3, height/2 - boxHeight/2, boxWidth, boxHeight);
-    fill(225);
-    stroke(253, 130, 0);
-    strokeWeight(2);
+     fill(225, 139, 225);
+    ///stroke(253, 130, 0);
+    //strokeWeight(2);
     rect(25 + boxWidth*secondBox + secondBox*3, height/2 - boxHeight/2, boxWidth, boxHeight);
     fill(0);
     text(Integer.toString(arr[secondBox]), 25 + boxWidth*secondBox + secondBox*3, height/2 - boxHeight/2, boxWidth, boxHeight);
     swapping = false;
   }
+  if (partition > arrSize - 1){
+    for(int i = 0; i < arrSize; i++){
+     fill(171, 139, 252);
+      rect(25 + boxWidth*i + i*3, height/2 - boxHeight/2, boxWidth, boxHeight);
+      fill(0);
+      text(Integer.toString(arr[i]), 25 + boxWidth*i + i*3, height/2 - boxHeight/2, boxWidth, boxHeight);
+     
+  }
+  }
+      
+  }
 
   //------------------------------------------------------------------------------------------------------
-}
+
 
 void keyPressed() {
-  if (keyCode == RETURN) {
+  if (keyCode == 'r' || keyCode == 'R') {
     setup();
   }
 }

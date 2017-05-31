@@ -1,0 +1,25 @@
+Plan update for 2017-05-31:
+Priority #1:
+  -Finish Bubble Sort small scale visualization
+  -Begin linking the visualizations to the main selection screen
+	-Rectangle Class can be shared for all Large Scale Visualizations
+	-All of the rArr classes need to be combined into one, with a separate "draw" class
+	("draw" classes means that they will not be actually called draw but will retain 
+	functionality)
+	-Functionality from the driver classes for each of the Large Scale sorts need to be 
+	moved to SA.pde
+	-Rectangle class for small scale visualization needs to be renamed
+	-Use of the <Name>SortSmall classes needs to be made accessible to SA.pde
+
+Priority #2 (Additional Functionality other than MVP): 
+  -Begin working on the other sorts (starting from Merge Sort)
+  
+Previous Goals We Have Accomplished So Far:
+  -Home Screen appearance almost ideal
+  -Each button on home screen changes color to indicate hovering over
+  -Clicking on a button changes the state
+  -Bubble Sort Large Scale Visualization is finished
+  -Selection Sort Large Scale Visualization is finished
+  -Selection Sort Small Scale Visualization is finished
+  -Insertion Sort Large Scale Visualization is finished
+  -Insertion Sort Small Scale Visualization is finished

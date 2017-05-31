@@ -38,8 +38,9 @@ class rArr {
       }
       part+=1;
     }
+    int counter = part;
     part-=1; //partition grew one too much, quick fix
-    index = 0; //reuse it cuz why not
+    index = 0;//reuse it cuz why not
     //at this point, the array should be formatted as a max-heap
     //and part will equal the index of the last item, and we have to decrease it until it's back to 0
     while (part > 0) {
@@ -52,12 +53,16 @@ class rArr {
       //until you reach a leaf or a point where the maxchild is smaller than the number at index:
       while (maxChild != -1 && rawr[index].getHeight() < rawr[maxChild].getHeight()) {
         //swap with the biggest child unless it's bigger than it (caught by while):
+        order.add(dupe(rawr));
+        count.add(counter);
         swap(rawr, index, maxChild);
         //update index to be where minChild is
         index=maxChild;
         //update midChild accordingly
         maxChild = maxChildPos(rawr, index, part);
+        counter++;
       }
+      
     }
   }
 
@@ -90,20 +95,6 @@ class rArr {
     return ret;
   }
 
-  void SelectionSortV() {
-    int maxPos;
-    for (int pass = rawr.length-1; pass >= 0; pass--) {
-      maxPos = 0;
-      for (int x = 0; x <= pass; x++) {
-        if (rawr[x].getHeight() > rawr[maxPos].getHeight() ) {
-          maxPos = x;
-          order.add(dupe(rawr));
-          count.add(x);
-        }
-      }
-      swap(rawr, pass, maxPos);
-    }
-  }
 
 
 

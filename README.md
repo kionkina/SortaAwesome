@@ -9,7 +9,7 @@ the sort they wish to see visualized. They will then be presented with the optio
 (visualized using 300 rectangles get sorted using the algorithm based on their height).
 
 ### How it works
-####Large Scale
+#### Large Scale
 The large scale sorts are done quite simply. Before the program is run, an ArrayList of Arrays of Rectangles called order is created, along with an array of objects caled Rectangles, each of which has a height representing its value. The Rectangles in the array are
 randomized by height. The array of Rectangles is then sorted using the algorithm one step at a time, and each step is saved in order.
 When the program is run, each array of order is printed out one at a time, showing the progression from unsorted to sorted.

@@ -1,9 +1,9 @@
 int counter;
-rArr rects;
+rArrIS rects;
 int[] arr;
 
 void setup() {
-  frameRate(60);
+  frameRate(500);
   counter = 0;
   size(600, 600);
   background(0);
@@ -12,7 +12,7 @@ void setup() {
   for (int x = 0; x < temp.length; x++) {
     temp[x] = new Rectangles( x*3, height - arr[x], 3, arr[x], 255 );
   }
-  rects = new rArr( temp ); //
+  rects = new rArrIS( temp ); //
 }
 
 void draw() {

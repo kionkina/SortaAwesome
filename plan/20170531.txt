@@ -8,7 +8,6 @@ Priority #1:
 	functionality)
 	-Functionality from the driver classes for each of the Large Scale sorts need to be 
 	moved to SA.pde
-	-Rectangle class for small scale visualization needs to be renamed
 	-Use of the <Name>SortSmall classes needs to be made accessible to SA.pde
 
 Priority #2 (Additional Functionality other than MVP): 

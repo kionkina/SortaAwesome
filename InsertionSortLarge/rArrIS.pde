@@ -1,10 +1,10 @@
-class rArr {
+class rArrIS {
   ArrayList<Integer> count;
   ArrayList<Rectangles[]> order;
   Rectangles[] rawr;
   int[] arr;
 
-  rArr(Rectangles[] roar) {// Constructor
+  rArrIS(Rectangles[] roar) {// Constructor
     setArr();
     rawr = dupe(roar);
 
@@ -14,7 +14,7 @@ class rArr {
     order.add(dupe(rawr));
     count.add(-1);
 
-    SelectionSortV();
+    InsertionSortV();
   }
 
   Rectangles[] dupe( Rectangles[] roar ) {
@@ -25,23 +25,25 @@ class rArr {
     return ret;
   }
 
-  void SelectionSortV() {
-    int maxPos;
-    for (int pass = rawr.length-1; pass >= 0; pass--) {
-      maxPos = 0;
-      for (int x = 0; x <= pass; x++) {
-        if (rawr[x].getHeight() > rawr[maxPos].getHeight() ) {
-          maxPos = x;
-          order.add(dupe(rawr));
-          count.add(x);
-        }
+  void InsertionSortV() {
+    for (int x = 1; x < rawr.length; x++) {
+      int y = x;
+      Rectangles r = rawr[x];
+      for (y = x; y > 0 && (rawr[y-1].getHeight() > r.getHeight()); y--) {
+        rawr[y] = rawr[y-1];
+        order.add(dupe(rawr));
+        count.add(y);
       }
-      swap(rawr, pass, maxPos);
+      rawr[y] = r;
+      order.add(dupe(rawr));
+      count.add(y);
     }
-    
+
+    Rectangles[] temp = order.remove( order.size() - 1);
+    order.add(dupe(temp));
+    order.add(dupe(temp));
+    count.add(-1);
   }
-
-
 
   void draw(int x) {
     for (int i  = 0; i < order.get(x).length; i++) {

@@ -13,6 +13,8 @@ boolean Over3 = false;
 boolean Over4 = false;
 boolean Over5 = false;
 int state; // determines which sort will be demonstrated
+boolean setup = true;
+BubbleSortLarge bubL;
 
 void setup() {
   background(color(0));
@@ -74,20 +76,20 @@ void draw() {
   }
 
 
-  if (state != 0) {
+  if (state == 1 || state == 4 || state == 7) {
 
     update();
     background(0);
-    
-     if (Over4) {
+
+    if (Over4) {
       fill(fillcolor);
     } else {
       fill(rect2Color);
     }
     stroke(255);
     rect(rect4X, rect4Y, recW, recH);
-    
-  if (Over5) {
+
+    if (Over5) {
       fill(fillcolor);
     } else {
       fill(rect2Color);
@@ -99,6 +101,16 @@ void draw() {
     makeText("Small Scale", rect4X + recW/4, rect4Y + recH/2, 0);
     makeText("Large Scale", rect5X + recW/4, rect5Y + recH/2, 0);
   }
+
+  if (state == 3) {
+    if (setup) {
+      bubL = new BubbleSortLarge();
+      setup = false;
+    } else{
+      bubL.drawBL();
+    }
+  }
+
   //stroke(0);
 }
 
@@ -121,22 +133,20 @@ void update() {
       Over3 = true;
       Over2 = false;
       Over1 = false;
-    } 
-      else {
+    } else {
       Over1 = false;
       Over2 = false;
       Over3 = false;
     }
   }
-   if (state != 0){  
-     if (OverRect(rect4X, rect4Y)) {
+  if (state != 0) {  
+    if (OverRect(rect4X, rect4Y)) {
       Over4 = true;
       Over5 = false;
-    } else if (OverRect(rect5X, rect5Y)){
+    } else if (OverRect(rect5X, rect5Y)) {
       Over4 = false;
       Over5 = true;
-    }
-    else {
+    } else {
       Over4 = false;
       Over5 = false;
     }
@@ -154,18 +164,22 @@ void mouseClicked() {
     state = 7;
   }
 
-  if (Over4){
+  if (Over4) {
     state += 1;
   }
-  
-  if (Over5){
+
+  if (Over5) {
     state += 2;
   }
-  
-  
 }
 //returns true if the mouse is on the respective rectangle
 boolean OverRect(int x, int y) {
   return mouseX >= x && mouseX <= x+recW &&
     mouseY  >= y && mouseY <= y +  recH;
+}
+
+void keyPressed() { //reset button
+  if (keyCode == 'R' || keyCode == 'r') { // if R is pressed
+    setup = true;// resets
+  }
 }

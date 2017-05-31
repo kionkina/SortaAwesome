@@ -15,9 +15,10 @@ When the program is run, each array of order is printed out one at a time, showi
 
 ### Launch Instructions
 1. Clone the SortaAwesome repository: git@github.com:kionkina/SortaAwesome.git OR https://github.com/kionkina/SortaAwesome.git
-2. Navigate to the repository on your computer
-3. Navigate to the SA directory in the SortaAwesome repository
-4. Open SA.pde
-5. Press the "Play" button once you have opened SA.pde and it will run
+2. Navigate to the directory holding the repository on your computer
+3. $ cd SortaAwesome
+4. $ cd SA
+5. $ processing SA.pde
+6. Press the "Play" button within processing
 (NOTE: AS OF 05/29/17, OPENING SA WILL ONLY ALLOW YOU TO SEE THE SORTS AVAILABLE AND CHOOSE LARGE SCALE/SMALL SCALE. HOWEVER, THEY ARE
 NOT CONNECTED TO ANY OF THE SORTS AND WILL NOT SHOW ANY VISUALIZATION OF THE SORTING ALGORITHMS. UNTIL FURTHER NOTICE, TO RUN THE SORTS, YOU MUST OPEN THEM EACH INDEPENDENTLY AND RUN THEM INDEPENDENTLY. THIS WILL BE CHANGED VERY SOON)

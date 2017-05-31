@@ -1,33 +1,29 @@
-int counter;
+int counter; // count iterations
 rArrIS rects;
-int[] arr;
+int[] arr; // heights
 
 void setup() {
   frameRate(500);
   counter = 0;
   size(600, 600);
   background(0);
-  setArr();
-  Rectangles[] temp = new Rectangles[width/3];
+  setArr(); // creates array w random heights
+  Rectangles[] temp = new Rectangles[width/3]; // creates Rectangles
   for (int x = 0; x < temp.length; x++) {
-    temp[x] = new Rectangles( x*3, height - arr[x], 3, arr[x], 255 );
+    temp[x] = new Rectangles( x*3, height - arr[x], 3, arr[x], 255 ); // sets heights
   }
-  rects = new rArrIS( temp ); //
+  rects = new rArrIS( temp ); //sorts
 }
 
 void draw() {
-  if (counter == rects.order.size() ) {
+  if (counter == rects.order.size() ) { // if on last "frame"
     background(0);
-    rects.draw(counter-1);
-  } else {
+    rects.draw(counter-1);//prints out sorted array
+  } else {// if not on last "frame"
     background(0);
-    rects.draw(counter);
-    counter++;
+    rects.draw(counter); //iterates through "frames" one by one
+    counter++;// next frame
   }
-}
-
-
-void sort() {
 }
 
 void setArr() { // makes an array with randomized rectangle heights
@@ -47,8 +43,8 @@ void setArr() { // makes an array with randomized rectangle heights
   }
 }
 
-void keyPressed() {
-  if (keyCode == 'R' || keyCode == 'r') {
-    setup();
+void keyPressed() { //reset button
+  if (keyCode == 'R' || keyCode == 'r') { // if R is pressed
+    setup();// resets
   }
 }

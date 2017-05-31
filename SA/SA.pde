@@ -15,6 +15,7 @@ boolean Over5 = false;
 int state; // determines which sort will be demonstrated
 boolean setup = true;
 BubbleSortLarge bubL;
+SelectionSortLarge selL;
 
 void setup() {
   background(color(0));
@@ -108,6 +109,15 @@ void draw() {
       setup = false;
     } else{
       bubL.drawBL();
+    }
+  }
+  
+  if (state==6) {
+    if (setup) {
+      selL = new SelectionSortLarge();
+      setup = false;
+    } else {
+      selL.drawSL();
     }
   }
 

@@ -1,23 +1,23 @@
 class rArrIS {
-  ArrayList<Integer> count;
-  ArrayList<Rectangles[]> order;
-  Rectangles[] rawr;
-  int[] arr;
+  ArrayList<Integer> count; // counter array
+  ArrayList<Rectangles[]> order; // array of frames
+  Rectangles[] rawr; // frame
+  int[] arr;// heights
 
   rArrIS(Rectangles[] roar) {// Constructor
     setArr();
     rawr = dupe(roar);
 
-    count = new ArrayList<Integer>();
-    order = new ArrayList<Rectangles[]>();
+    count = new ArrayList<Integer>();// initializes the array
+    order = new ArrayList<Rectangles[]>();// initializes the array
 
-    order.add(dupe(rawr));
+    order.add(dupe(rawr));//start frame
     count.add(-1);
 
-    InsertionSortV();
+    InsertionSortV();//sorts rawr
   }
 
-  Rectangles[] dupe( Rectangles[] roar ) {
+  Rectangles[] dupe( Rectangles[] roar ) {//makes a copy of the "frame"
     Rectangles[] ret = new Rectangles[ roar.length];
     for (int x = 0; x < roar.length; x++) {
       ret[x] = roar[x].dupe();
@@ -25,17 +25,17 @@ class rArrIS {
     return ret;
   }
 
-  void InsertionSortV() {
+  void InsertionSortV() {//Insertion Sort
     for (int x = 1; x < rawr.length; x++) {
       int y = x;
       Rectangles r = rawr[x];
       for (y = x; y > 0 && (rawr[y-1].getHeight() > r.getHeight()); y--) {
         rawr[y] = rawr[y-1];
-        order.add(dupe(rawr));
+        order.add(dupe(rawr)); // adds frame after one swap
         count.add(y);
       }
       rawr[y] = r;
-      order.add(dupe(rawr));
+      order.add(dupe(rawr));//adds frame after second swap
       count.add(y);
     }
 
@@ -45,7 +45,7 @@ class rArrIS {
     count.add(-1);
   }
 
-  void draw(int x) {
+  void draw(int x) {// draws frame
     for (int i  = 0; i < order.get(x).length; i++) {
       Rectangles r = order.get(x)[i];
       r.draw(i*3, 3, count.get(x) == i);
@@ -54,7 +54,7 @@ class rArrIS {
 
 
 
-  void swap( Rectangles[] roar, int a, int b) {
+  void swap( Rectangles[] roar, int a, int b) {//swaps rectangles at a and b in roar
     Rectangles temp = roar[a];
     roar[a] = roar[b];
     roar[b] = temp;

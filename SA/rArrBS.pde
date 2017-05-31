@@ -40,7 +40,7 @@ class rArrBS {
   void drawrBL(int x) { // draws frame
     for (int i  = 0; i < order.get(x).length; i++) {
       Rectangles r = order.get(x)[i];
-      r.drawR(i*3, 3, count.get(x) == i);
+      r.drawRB(i*3, 3, count.get(x) == i);
     }
   }
 

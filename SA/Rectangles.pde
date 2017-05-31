@@ -13,12 +13,31 @@ class Rectangles {
     c = culur;
   }
 
-  void drawR(int ex, int with, boolean chosen) { // draws the rectangle using dimensions given
+  void drawRB(int ex, int with, boolean chosen) { // draws the rectangle using dimensions given
     if (chosen) {
-      fill(60,87,164);
-    }
-    else {
+      fill(60, 87, 164);
+    } else {
       fill(96, 168, 196);
+    }
+    stroke(c);
+    rect(ex, y, with, h);
+  }
+
+  void drawRS(int ex, int with, boolean chosen) { // draws the rectangle using dimensions given
+    if (chosen) {
+      fill(138, 225, 0);
+    } else {
+      fill(127, 255, 212);
+    }
+    stroke(c);
+    rect(ex, y, with, h);
+  }
+
+  void drawRI(int ex, int with, boolean chosen) { // draws the rectangle using dimensions given
+    if (chosen) {
+      fill(171, 139, 252);
+    } else {
+      fill(225, 139, 225);
     }
     stroke(c);
     rect(ex, y, with, h);

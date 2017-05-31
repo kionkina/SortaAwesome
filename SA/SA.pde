@@ -16,6 +16,9 @@ int state; // determines which sort will be demonstrated
 boolean setup = true;
 BubbleSortLarge bubL;
 SelectionSortLarge selL;
+InsertionSortLarge insL;
+InsertionSortSmall insS;
+SelectionSortSmall selS;
 
 void setup() {
   background(color(0));
@@ -107,17 +110,44 @@ void draw() {
     if (setup) {
       bubL = new BubbleSortLarge();
       setup = false;
-    } else{
+    } else {
       bubL.drawBL();
     }
   }
-  
+
+  if (state==5) {
+    if (setup) {
+      selS = new SelectionSortSmall();
+      setup = false;
+    } else {
+      selS.drawSS();
+    }
+  }
+
   if (state==6) {
     if (setup) {
       selL = new SelectionSortLarge();
       setup = false;
     } else {
       selL.drawSL();
+    }
+  }
+
+  if (state==8) {
+    if (setup) {
+      insS = new InsertionSortSmall();
+      setup = false;
+    } else {
+      insS.drawIS();
+    }
+  }
+
+  if (state==9) {
+    if (setup) {
+      insL = new InsertionSortLarge();
+      setup = false;
+    } else {
+      insL.drawIL();
     }
   }
 

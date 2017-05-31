@@ -17,7 +17,7 @@ When the program is run, each array of order is printed out one at a time, showi
 For the small scale visualization, an array is displayed, with each index represented by a white rectangle and the corresponding integer over it. 
 The array is then sorted using the selected sorting algorithm. The code was changed to adapt to the processing format, where display is refreshing once each second. 
 For selection sort and insertion sort, a red partition is displayed to separate the sorted part of the array from the unsorted part. 
-In Selection Sort, a blue color is representative of maxPos
+In Selection Sort, a blue color is representative of maxPos.
 In Insertion Sort, the indecies being swapped are colored purple. The entire array is colored blue when the array is sorted.
 
 ### Launch Instructions

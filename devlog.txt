@@ -75,3 +75,22 @@ title screen
 -Created BubbleSort InsertionSort and SelectionSort classes
 based on our UML
 ==============================================================
+
+2017-05-27
+--------------------------------------------------------------
+- Marked finished large scale selection sort, bubble sort,
+insertion sort.
+- Karina worked on small scale insertion sort 
+==============================================================
+
+2017-05-28
+--------------------------------------------------------------
+- Mark added reset functions to visualizations
+==============================================================
+
+2017-05-29
+--------------------------------------------------------------
+- Karina finished small scale insertion sort
+- Karina finished small scale selection sort 
+==============================================================
+

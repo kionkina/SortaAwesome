@@ -8,6 +8,8 @@ pd 05
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
 OBSTACLES OVERCOME
+~On the title page we couldnt get text to 
+appear over a rectangle but it is all good.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 UNRESOLVED ISSUES
@@ -20,6 +22,11 @@ bit off.
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo! 
+2017-05-22
+DISCOVERY: dont put background(color(x))
+in the draw() method because it'll cover the
+text in the setup() method and refresh each
+time...
 
 
 MID-DEVELOPMENT DESIGN CHANGES
@@ -42,7 +49,29 @@ for the sort visualizations (determines which sort is shown)
 
 ==============================================================
 
-2017-05-20
+2017-05-22
 --------------------------------------------------------------
+Karina, David, Mark:
+-In class, on Karina's laptop, fixed a couple bugs with start menu code
+  -Rectangles now change color correctly when moouse is inside box
+  -Began to fix bug where text would not show up in the boxes
+==============================================================
 
+2017-05-23
+--------------------------------------------------------------
+Karina, David, Mark:
+-In class, we worked on our flow chart
+-Brainstormed UML content
+==============================================================
+
+2017-05-24
+--------------------------------------------------------------
+Karina, David, Mark:
+-In class, on Karina's laptop, fixed a couple bugs with the 
+title screen
+
+-We created interface ArrayStructure
+
+-Created BubbleSort InsertionSort and SelectionSort classes
+based on our UML
 ==============================================================

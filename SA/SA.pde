@@ -19,6 +19,7 @@ SelectionSortLarge selL;
 InsertionSortLarge insL;
 InsertionSortSmall insS;
 SelectionSortSmall selS;
+BubbleSortSmall bubS;
 
 void setup() {
   background(color(0));
@@ -104,6 +105,15 @@ void draw() {
 
     makeText("Small Scale", rect4X + recW/4, rect4Y + recH/2, 0);
     makeText("Large Scale", rect5X + recW/4, rect5Y + recH/2, 0);
+  }
+
+  if (state == 2) {
+    if (setup) {
+      bubS = new BubbleSortSmall();
+      setup = false;
+    } else {
+      bubS.drawBS();
+    }
   }
 
   if (state == 3) {

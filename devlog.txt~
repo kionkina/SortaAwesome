@@ -36,6 +36,7 @@ MID-DEVELOPMENT DESIGN CHANGES
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
+mouseClicked() function needs states just as much as draw does...
 
 
 2017-05-20

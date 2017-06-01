@@ -36,10 +36,11 @@ MID-DEVELOPMENT DESIGN CHANGES
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
-mouseClicked() function needs states just as much as draw does...
-Whenever you make a call like stroke or textSize those are universal
+-mouseClicked() function needs states just as much as draw does...
+-Whenever you make a call like stroke or textSize those are universal
 so if you don't want them to affect everything you have to call those 
 functions again to rest the rest of your work
+-don't forget to reset frame rate as that can cause what feels like lag
 
 
 2017-05-20

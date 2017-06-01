@@ -13,7 +13,7 @@ boolean Over3 = false;
 boolean Over4 = false;
 boolean Over5 = false;
 int state; // determines which sort will be demonstrated
-boolean setup = true;
+boolean setup;
 BubbleSortLarge bubL;
 SelectionSortLarge selL;
 InsertionSortLarge insL;
@@ -22,15 +22,19 @@ SelectionSortSmall selS;
 BubbleSortSmall bubS;
 
 void setup() {
+  frameRate(60);
   background(color(0));
+  textSize(40);
+  fill(225);
+  text("Sorta Awesome Visualizer", 47, 100); 
   textSize(32);
-  text("Sorta Aweseome Visualizer", 120, 100); 
   fill(0, 50, 153);
   size(600, 600);
   rectColor = color(50);
   rect2Color = color(50);
   rect3Color = color(50);
   fillcolor = color(255);
+  setup = true;
 
   //locates 
   rect1X = (width - recW)/2;
@@ -57,22 +61,28 @@ void draw() {
     } else {
       fill(rectColor);
     }
+    strokeWeight(5);
     stroke(255);
     rect(rect1X, rect1Y, recW, recH);
+    noStroke();
     if (Over2) {
       fill(fillcolor);
     } else {
       fill(rect2Color);
     }
+    strokeWeight(5);
     stroke(255);
     rect(rect2X, rect2Y, recW, recH);
+    noStroke();
     if (Over3) {
       fill(fillcolor);
     } else {
       fill(rect3Color);
     }
+    strokeWeight(5);
     stroke(255);
     rect(rect3X, rect3Y, recW, recH);
+    noStroke();
 
 
     makeText("Bubble Sort", rect1X + recW/4 - 10, rect1Y + recH/2 + 10, 0);
@@ -91,17 +101,20 @@ void draw() {
     } else {
       fill(rect2Color);
     }
+    strokeWeight(5);
     stroke(255);
     rect(rect4X, rect4Y, recW, recH);
+    noStroke();
 
     if (Over5) {
       fill(fillcolor);
     } else {
       fill(rect2Color);
     }
+    strokeWeight(5);
     stroke(255);
-
     rect(rect5X, rect5Y, recW, recH);
+    noStroke();
 
     makeText("Small Scale", rect4X + recW/4, rect4Y + recH/2, 0);
     makeText("Large Scale", rect5X + recW/4, rect5Y + recH/2, 0);
@@ -204,22 +217,25 @@ void update() {
 }
 
 void mouseClicked() {
-  if (Over1) {
-    state = 1;
+  if (state == 0) {
+    if (Over1) {
+      state = 1;
+    }
+    if (Over2) {
+      state = 4;
+    }
+    if (Over3) {
+      state = 7;
+    }
   }
-  if (Over2) {
-    state = 4;
-  }
-  if (Over3) {
-    state = 7;
-  }
+  else if (state == 1 || state == 4 || state==7) {
+    if (Over4) {
+      state += 1;
+    }
 
-  if (Over4) {
-    state += 1;
-  }
-
-  if (Over5) {
-    state += 2;
+    if (Over5) {
+      state += 2;
+    }
   }
 }
 //returns true if the mouse is on the respective rectangle
@@ -231,5 +247,9 @@ boolean OverRect(int x, int y) {
 void keyPressed() { //reset button
   if (keyCode == 'R' || keyCode == 'r') { // if R is pressed
     setup = true;// resets
+  }
+  if (keyCode == 'M' || keyCode == 'm') {
+    state = 0;
+    setup();
   }
 }

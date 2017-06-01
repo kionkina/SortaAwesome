@@ -15,12 +15,14 @@ class Rectangles {
 
   void drawRB(int ex, int with, boolean chosen) { // draws the rectangle using dimensions given
     if (chosen) {
-      fill(60, 87, 164);
+      fill(138, 225, 0);
     } else {
-      fill(96, 168, 196);
+      fill(171, 139, 252);
     }
+    strokeWeight(1);
     stroke(c);
     rect(ex, y, with, h);
+    noStroke();
   }
 
   void drawRS(int ex, int with, boolean chosen) { // draws the rectangle using dimensions given
@@ -29,8 +31,10 @@ class Rectangles {
     } else {
       fill(127, 255, 212);
     }
+    strokeWeight(1);
     stroke(c);
     rect(ex, y, with, h);
+    noStroke();
   }
 
   void drawRI(int ex, int with, boolean chosen) { // draws the rectangle using dimensions given
@@ -39,8 +43,10 @@ class Rectangles {
     } else {
       fill(225, 139, 225);
     }
+    strokeWeight(1);
     stroke(c);
     rect(ex, y, with, h);
+    noStroke();
   }
 
   float getHeight() {//accessor

@@ -38,6 +38,8 @@ class rArrSS {
       }
       swap(rawr, pass, maxPos);// swap
     }
+    order.add(dupe(rawr));
+    count.add(count.size());
   }
 
 

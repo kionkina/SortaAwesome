@@ -62,8 +62,9 @@ class rArr {
         maxChild = maxChildPos(rawr, index, part);
         counter++;
       }
-      
     }
+    order.add(dupe(rawr));
+    count.add(counter);
   }
 
   public int maxChildPos(Rectangles[] roar, int pos, int part) {

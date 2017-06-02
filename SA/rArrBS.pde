@@ -35,6 +35,8 @@ class rArrBS {
         }
       }
     }
+    order.add(dupe(rawr));
+    count.add(count.size());
   }
 
   void drawrBL(int x) { // draws frame
@@ -51,8 +53,8 @@ class rArrBS {
     roar[a] = roar[b];
     roar[b] = temp;
   }
-  
-    void setArr() { // makes an array with randomized rectangle heights
+
+  void setArr() { // makes an array with randomized rectangle heights
     arr = new int[width];
     double scale = height/ width;
     for (int x = 0; x < arr.length; x++) {

@@ -1,0 +1,27 @@
+Sorta Awesome: Karina Ionkina, David Frid, Mark Shafran
+APCS2 pd05
+HW47 -- Are We There Yet?
+2017-06-02
+
+Plan update for 2017-06-02:
+Priority #1:
+  -Work on small scale heapsort visualization
+  -Begin working on implementing other sorting algorithms. Algorithms in consideration include:
+	-MergeSort
+	-BogoSort
+	-RadixSort
+  -Add a second page to our title screen
+  
+Previous Goals We Have Accomplished So Far:
+  -Home Screen appearance ideal
+  -Each button on home screen changes color to indicate hovering over
+  -Clicking on a button changes the state
+  -Bubble Sort Large Scale Visualization is finished
+  -Bubble Sort Small Scale Visualization is finished
+  -Selection Sort Large Scale Visualization is finished
+  -Selection Sort Small Scale Visualization is finished
+  -Insertion Sort Large Scale Visualization is finished
+  -Insertion Sort Small Scale Visualization is finished
+  -Home screen fully connected to all MVP sorts
+  - MVP IS DONE!!!!
+  -Heapsort large scale visualization is done

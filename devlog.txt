@@ -96,6 +96,26 @@ insertion sort.
 2017-05-29
 --------------------------------------------------------------
 - Karina finished small scale insertion sort
-- Karina finished small scale selection sort 
+- David began work on large scale heapSort
+- Mark began linking sorts to title screen
 ==============================================================
 
+2017-05-30
+--------------------------------------------------------------
+- Karina finished small scale selection sort and began work on bubble sort
+- David continued work on large scale heapsort
+- Mark continued linking sorts to title screen
+==============================================================
+
+2017-05-31
+--------------------------------------------------------------
+- Karina finished small scale bubble sort
+- David finished heapsort
+- Mark finished linking sorts to title screen
+==============================================================
+
+2017-06-01
+--------------------------------------------------------------
+- Karina, David, Mark worked on bug fixing in title screen and MVP functionality
+- MVP was finished!!!!!
+==============================================================

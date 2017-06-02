@@ -119,3 +119,8 @@ insertion sort.
 - Karina, David, Mark worked on bug fixing in title screen and MVP functionality
 - MVP was finished!!!!!
 ==============================================================
+
+2017-06-02
+--------------------------------------------------------------
+- David and Mark looked to fix some bugs and began working on bogo sort.
+==============================================================

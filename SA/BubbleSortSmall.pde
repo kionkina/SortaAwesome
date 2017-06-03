@@ -112,9 +112,13 @@ class BubbleSortSmall {
     for (int i = 0; i < arrSize; i++) {
       if ( pass >= arrSize) {
         fill(138, 225, 115);
-      } else if ( i == firstBox || i == secondBox) {
+      } else if ( i == firstBox) {
         fill(171, 139, 252);
-      } else {
+      } 
+      else if  (i == secondBox){
+        fill(118,255,172);
+      }
+      else {
         fill(225);
       }
       rect(25 + boxWidth*i + i*3, height/2 - boxHeight/2, boxWidth, boxHeight);

@@ -144,8 +144,12 @@ void draw() {
       
       for (int i = 0; i < arrSize; i++) {
 
-         if ( i == firstBox || i == secondBox){
+         if ( i == firstBox ){
           fill(255, 51, 51);
+        }
+        
+        else if( i == secondBox){
+                    fill(153, 153, 255);
         }
         else {
         fill(225);

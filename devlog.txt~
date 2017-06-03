@@ -36,11 +36,11 @@ MID-DEVELOPMENT DESIGN CHANGES
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
--mouseClicked() function needs states just as much as draw does...
--Whenever you make a call like stroke or textSize those are universal
-so if you don't want them to affect everything you have to call those 
-functions again to rest the rest of your work
--don't forget to reset frame rate as that can cause what feels like lag
+As of 2017-05-30:
+The hardest part of this project so far is 
+changing your mindset to the constant
+refreshing used in draw(). Adaptability is 
+a useful thing! 
 
 
 2017-05-20
@@ -96,14 +96,31 @@ insertion sort.
 2017-05-29
 --------------------------------------------------------------
 - Karina finished small scale insertion sort
-- Karina finished small scale selection sort 
+- David began work on large scale heapSort
+- Mark began linking sorts to title screen
+==============================================================
+
+2017-05-30
+--------------------------------------------------------------
+- Karina finished small scale selection sort and began work on bubble sort
+- David continued work on large scale heapsort
+- Mark continued linking sorts to title screen
 ==============================================================
 
 2017-05-31
 --------------------------------------------------------------
-- Karina finsihed bubbleSort
-- Mark connected sorts to main driver 
-- David finsihed heapSort large scale
+- Karina finished small scale bubble sort
+- David finished heapsort
+- Mark finished linking sorts to title screen
 ==============================================================
 
+2017-06-01
+--------------------------------------------------------------
+- Karina, David, Mark worked on bug fixing in title screen and MVP functionality
+- MVP was finished!!!!!
+==============================================================
 
+2017-06-02
+--------------------------------------------------------------
+- David and Mark looked to fix some bugs and began working on bogo sort.
+==============================================================

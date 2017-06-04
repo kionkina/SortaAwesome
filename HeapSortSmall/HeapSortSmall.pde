@@ -26,7 +26,7 @@ void setup() {
   noStroke();
   background(0);
   size(600, 600);
-  arrSize = (int) ((Math.random() * 5) + 6);
+  arrSize = (int) ((Math.random() * 1) + 15 );
   //nodes = new int[arrSize][2];
   boxWidth = (width - ((2*arrSize) + 100)) / arrSize;
   boxHeight = height/15;
@@ -174,3 +174,8 @@ void setup() {
  }
  */
 //--------------------------------------------------------------------------------------------------------------
+void keyPressed() { //reset button
+  if (keyCode == 'R' || keyCode == 'r') { // if R is pressed
+    setup();// resets
+  }
+}

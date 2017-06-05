@@ -24,7 +24,7 @@ void setup() {
   wait = false;
   done = false;
   System.out.println("i " + i);
-  frameRate(100);
+  frameRate(5);
   noStroke();
   background(0);
   size(600, 600);
@@ -101,7 +101,7 @@ void draw() {
     //index keeps track of where the thing that was most recently added to the heap is
     //until the index'd thing is in the right level of the heap:
     //note: this keeps going until arr[index] is greater because this is a max-heap
-    if (arr.get(index) > arr.get((index-1)/2) ) {
+    if (part > 0 && arr.get(index) > arr.get((index-1)/2) ) {
       //promote the child by swapping with it's parent
       swap(index, ((index-1)/2));
       index = (index-1)/2;
@@ -135,7 +135,7 @@ void draw() {
       index = maxChild;
       maxChild = maxChildPos(index, part);
     }
-    else {
+    else{
       swap(0, part);
       part -= 1;
       index = 0;
@@ -150,6 +150,16 @@ void draw() {
 
   //---------------------------------------display---------------------
   background(0);
+  noStroke();
+  for (int i = 0; i < arr.size(); i++){
+   fill(225);
+    rect(50 + boxWidth*i + i*3, height/10 - boxHeight/2, boxWidth, boxHeight);
+    fill(0);
+    textSize(15);
+    text(Integer.toString(arr.get(i)), 50 + boxWidth*i + i*3, height/10 - boxHeight/2, boxWidth, boxHeight);
+  }
+  
+  
   node(rootX + 20, rootY, arr.get(0), 0, false);
   for (int p = 1; p < arr.size(); p++) {
     if (p% 2 != 0) {

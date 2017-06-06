@@ -8,6 +8,7 @@ float levelX;
 float levelY;
 boolean filling;
 int i;
+int x;
 boolean odd;
 theSort arr1;
 int counter = 0;
@@ -87,9 +88,10 @@ void setup() {
 
 
 void draw() {
-  if (counter < arr1.order.size())
-  display( arr1.order.get(counter));
-  counter++;
+  if (x < arr1.order.size()){
+  display( arr1.order.get(x));
+  x++;
+  }
 }
 
 

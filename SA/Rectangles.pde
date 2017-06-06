@@ -49,6 +49,14 @@ class Rectangles {
     noStroke();
   }
 
+  void drawR() {
+    fill(171, 139, 252);
+    strokeWeight(1);
+    stroke(c);
+    rect(x, y, w, h);
+    noStroke();
+  }
+
   float getHeight() {//accessor
     return h;
   }

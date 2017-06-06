@@ -24,6 +24,7 @@ InsertionSortLarge insL;
 InsertionSortSmall insS;
 SelectionSortSmall selS;
 BubbleSortSmall bubS;
+BogoSortLarge bogL;
 
 void setup() {
   frameRate(60);
@@ -217,6 +218,16 @@ void draw() {
     makeText("BogoSort", rect4X + recW/4, rect4Y + recH/2, 0);
     makeText("HeapSort", rect5X + recW/4, rect5Y + recH/2, 0);
   }
+  
+  if (state == 13) {
+    if (setup) {
+      bogL = new BogoSortLarge();
+      setup = false;
+    } else {
+      bogL.drawBGL();
+    }
+  }
+    
 
   //stroke(0);
 }

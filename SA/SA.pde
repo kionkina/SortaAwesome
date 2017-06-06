@@ -65,7 +65,7 @@ void draw() {
   if (state == 0) {
     update();
     if (Over1) {
-      fill(168,50,252);
+      fill(168,100,252);
     } else {
       fill(rectColor);
     }
@@ -115,27 +115,29 @@ void draw() {
     background(0);
 
     if (Over4) {
-      fill(fillcolor);
+          fill(168,100,252);
     } else {
-      fill(rect2Color);
+  
+      fill(rectColor);
     }
-    strokeWeight(5);
+    strokeWeight(2);
     stroke(255);
     rect(rect4X, rect4Y, recW, recH);
     noStroke();
 
     if (Over5) {
-      fill(fillcolor);
+      fill(0, 255, 200);
+      
     } else {
       fill(rect2Color);
     }
-    strokeWeight(5);
+    strokeWeight(2);
     stroke(255);
-    rect(rect5X, rect5Y, recW, recH);
+    rect(rect5X, rect5Y, recW, recH); 
     noStroke();
 
-    makeText("Small Scale", rect4X + recW/4, rect4Y + recH/2, 0);
-    makeText("Large Scale", rect5X + recW/4, rect5Y + recH/2, 0);
+    makeText("Small Scale", rect4X + recW/4 - 10, rect4Y + recH/2 + 5, 0);
+    makeText("Large Scale", rect5X + recW/4 - 10, rect5Y + recH/2 + 5, 0);
   }
 
   if (state == 2) {
@@ -197,21 +199,23 @@ void draw() {
     background(0);
 
     if (Over7) {
-      fill(fillcolor);
+          fill(168,100,252);
     } else {
-      fill(rect2Color);
+  
+      fill(rectColor);
     }
-    strokeWeight(5);
+    strokeWeight(2);
     stroke(255);
     rect(rect4X, rect4Y, recW, recH);
     noStroke();
 
-    if (Over8) {
-      fill(fillcolor);
+     if (Over8) {
+      fill(0, 255, 200);
+      
     } else {
       fill(rect2Color);
     }
-    strokeWeight(5);
+    strokeWeight(2);
     stroke(255);
     rect(rect5X, rect5Y, recW, recH);
     noStroke();

@@ -73,7 +73,7 @@ class InsertionSortSmall {
 
     //-------------------------parition maintenance-------------------------------------------------------------
     noStroke();
-    fill(225, 0, 0);
+    fill(225, 51, 51);
     rect(25 +boxWidth+(boxWidth + 3)*(partition), width/2 - boxHeight*2, 3, boxHeight*4);
     fill(0);
     rect(25 +boxWidth+((boxWidth + 3)*(partition - 1 )), width/2 - boxHeight*2, 3, boxHeight*4);

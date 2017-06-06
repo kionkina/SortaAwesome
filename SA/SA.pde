@@ -32,19 +32,19 @@ void setup() {
   background(color(0));
   textSize(40);
   fill(225);
-  text("Sorta Awesome Visualizer", 47, 100); 
+  text("Sorta Awesome Visualizer", 47, 80); 
   textSize(32);
   fill(0, 50, 153);
   size(600, 600);
-  rectColor = color(138, 225, 115);
-  rect2Color = color(50);
-  rect3Color = color(50);
+  rectColor =   color(171, 139, 252);
+  rect2Color =  color(127, 255, 212);
+  rect3Color = color(225, 139, 225);
   fillcolor = color(255);
   setup = true;
 
   //locates 
   rect1X = (width - recW)/2;
-  rect1Y = (height - recH*3 + 20*2) / 2  ;
+  rect1Y = (height - recH*4 + 20*2) / 2  ;
   rect2X = rect1X;
   rect2Y = rect1Y + recH +  20;
   rect3X = rect2X;
@@ -54,7 +54,7 @@ void setup() {
   rect5X = rect4X;
   rect5Y =  (height - (2*recH + recH/2))/2 + 2*recH/2 + recH/2;
   rect6X = rect5X;
-  rect6Y = rect5Y + 210;
+  rect6Y = rect5Y + 160;
   System.out.println(rect1Y);
 }
 
@@ -65,7 +65,7 @@ void draw() {
   if (state == 0) {
     update();
     if (Over1) {
-      fill(118,255,172);
+      fill(168,50,252);
     } else {
       fill(rectColor);
     }
@@ -74,7 +74,7 @@ void draw() {
     rect(rect1X, rect1Y, recW, recH);
     noStroke();
     if (Over2) {
-      fill(fillcolor);
+      fill(0, 255, 200);
     } else {
       fill(rect2Color);
     }
@@ -83,7 +83,7 @@ void draw() {
     rect(rect2X, rect2Y, recW, recH);
     noStroke();
     if (Over3) {
-      fill(fillcolor);
+      fill(225, 100, 225);
     } else {
       fill(rect3Color);
     }
@@ -92,9 +92,9 @@ void draw() {
     rect(rect3X, rect3Y, recW, recH);
     noStroke();
     if (Over6) {
-      fill(fillcolor);
+      fill(0,200,204);
     } else {
-      fill(rect3Color);
+      fill(128, 200, 200);
     }
     strokeWeight(2);
     stroke(255);
@@ -102,9 +102,9 @@ void draw() {
     noStroke();
 
 
-    makeText("Bubble Sort", rect1X + recW/4 - 10, rect1Y + recH/2 + 10, 0);
-    makeText("Selection Sort", rect2X + recW/4 - 10, rect2Y + recH/2 + 10, 0);
-    makeText("Insertion Sort", rect3X + recW/4 - 10, rect3Y + recH/2 + 10, 0);
+    makeText("Bubble Sort", rect1X + recW/4 - 20, rect1Y + recH/2 + 10, 0);
+    makeText("Selection Sort", rect2X + recW/4 - 20, rect2Y + recH/2 + 10, 0);
+    makeText("Insertion Sort", rect3X + recW/4 - 20, rect3Y + recH/2 + 10, 0);
     makeText("Tired of O(n^2)?", rect6X + recW/4 - 45, rect6Y + 20 + 10, 0);
   }
 

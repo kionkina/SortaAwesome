@@ -31,7 +31,7 @@ class SelectionSortSmall {
   int pass;
 
   SelectionSortSmall() {
-    frameRate(1.5);
+    frameRate(5);
     background(0);
     size(600, 600);
 
@@ -98,43 +98,59 @@ class SelectionSortSmall {
 
 
     //-------------------------parition maintenance-------------------------------------------------------------
+    if (pass > 0){
     noStroke();
     fill(0, 102, 204);
     rect(25 +boxWidth+(boxWidth + 3)*(pass), width/2 - boxHeight*2, 3, boxHeight*4);
     fill(0);
     rect(25 +boxWidth+((boxWidth + 3)*(pass + 1)), width/2 - boxHeight*2, 3, boxHeight*4);
+    }
+    else if (pass <= 0) {
+    fill(0);
+    noStroke();
+    rect(25 +boxWidth+(boxWidth + 3)*2, width/2 - boxHeight*2, 3, boxHeight*4);
+    fill(0);
+    noStroke();
+    rect(25 +boxWidth+(boxWidth + 3), width/2 - boxHeight*2, 3, boxHeight*4);
+    }
+  
+      
     //----------------------------------------------------------------------------------------------------------
 
-    // helps visualize that maxPos is 0 at first
-    if (pass == 0) { 
-      fill(0); 
-      rect(25 +boxWidth+((boxWidth + 3)*pass), width/2 - boxHeight*2, 3, boxHeight*4);
-    } 
-
-
-    noStroke();
-
-    for (int p =0; p < arrSize; p++) { 
-
-      //colors sorted indecies green :) 
-      if (p > pass ||( pass == 0 && p == 0)) {
-        fill(138, 225, 90);
-      }  
-
-      //colors the maxPos a light blue color
-      else if (p == maxPos) { 
-        fill(127, 255, 212);
+    //shows array is sorted
+    if (pass <= 0) {
+      for (int p = 0; p < arrSize; p++) {
+        noStroke();
+        fill(171, 139, 252);
+        rect(25 + boxWidth * p + 3*p, height/2 - boxHeight/2, boxWidth, boxHeight);
+        fill(0);
+        textSize(14);
+        text(Integer.toString(arr[p]), 25 + boxWidth*p + p*3, height/2 - boxHeight/2, boxWidth, boxHeight);
       }
-      //rest of the indecies are white
-      else {
-        fill(225);
-      }
-      rect(25 + boxWidth * p + 3*p, height/2 - boxHeight/2, boxWidth, boxHeight);
+    } else {
+    
+      for (int p =0; p < arrSize; p++) { 
 
-      //-------------------------text maintenance-------------------------------------------------------------
-      fill(0);
-      textSize(14);
-      text(Integer.toString(arr[p]), 25 + boxWidth*p + p*3, height/2 - boxHeight/2, boxWidth, boxHeight);
-    }//----------------------------------------------------------------------------------------------------------
-  } // end of draw()
+        //colors sorted indecies green :) 
+        if (p > pass ||( pass == 0 && p == 0)) {
+          fill(9, 205, 172);
+        }  
+
+        //colors the maxPos a light blue color
+        else if (p == maxPos) { 
+          fill(127, 255, 212);
+        }
+        //rest of the indecies are white
+        else {
+          fill(225);
+        }
+        rect(25 + boxWidth * p + 3*p, height/2 - boxHeight/2, boxWidth, boxHeight);
+
+        //-------------------------text maintenance-------------------------------------------------------------
+        fill(0);
+        textSize(14);
+        text(Integer.toString(arr[p]), 25 + boxWidth*p + p*3, height/2 - boxHeight/2, boxWidth, boxHeight);
+      }//----------------------------------------------------------------------------------------------------------
+    }
+  }// end of draw()
 }

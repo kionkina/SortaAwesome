@@ -31,7 +31,7 @@ class SelectionSortSmall {
   int pass;
 
   SelectionSortSmall() {
-    frameRate(1);
+    frameRate(1.5);
     background(0);
     size(600, 600);
 
@@ -118,7 +118,7 @@ class SelectionSortSmall {
 
       //colors sorted indecies green :) 
       if (p > pass ||( pass == 0 && p == 0)) {
-        fill(138, 225, 0);
+        fill(138, 225, 90);
       }  
 
       //colors the maxPos a light blue color

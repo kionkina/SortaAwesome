@@ -3,6 +3,7 @@ int rect2X, rect2Y;
 int rect3X, rect3Y;
 int rect4X, rect4Y;
 int rect5X, rect5Y;
+int rect6X, rect6Y;
 int recW = 300;
 int recH = 100;
 color rectColor, rect2Color, rect3Color;
@@ -12,6 +13,9 @@ boolean Over2 = false;
 boolean Over3 = false;
 boolean Over4 = false;
 boolean Over5 = false;
+boolean Over6 = false;
+boolean Over7 = false;
+boolean Over8 = false;
 int state; // determines which sort will be demonstrated
 boolean setup;
 BubbleSortLarge bubL;
@@ -47,6 +51,8 @@ void setup() {
   rect4Y = (height - (2*recH + recH/2))/2;
   rect5X = rect4X;
   rect5Y =  (height - (2*recH + recH/2))/2 + 2*recH/2 + recH/2;
+  rect6X = rect5X;
+  rect6Y = rect5Y + 210;
   System.out.println(rect1Y);
 }
 
@@ -83,15 +89,25 @@ void draw() {
     stroke(255);
     rect(rect3X, rect3Y, recW, recH);
     noStroke();
+    if (Over6) {
+      fill(fillcolor);
+    } else {
+      fill(rect3Color);
+    }
+    strokeWeight(5);
+    stroke(255);
+    rect(rect6X, rect6Y, recW, 40);
+    noStroke();
 
 
     makeText("Bubble Sort", rect1X + recW/4 - 10, rect1Y + recH/2 + 10, 0);
     makeText("Selection Sort", rect2X + recW/4 - 10, rect2Y + recH/2 + 10, 0);
     makeText("Insertion Sort", rect3X + recW/4 - 10, rect3Y + recH/2 + 10, 0);
+    makeText("Tired of O(n^2)?", rect6X + recW/4 - 45, rect6Y + 20 + 10, 0);
   }
 
 
-  if (state == 1 || state == 4 || state == 7) {
+  if (state == 1 || state == 4 || state == 7 || state == 11 || state == 14) {
 
     update();
     background(0);
@@ -174,6 +190,34 @@ void draw() {
     }
   }
 
+  if (state == 10) {
+    update();
+    background(0);
+
+    if (Over7) {
+      fill(fillcolor);
+    } else {
+      fill(rect2Color);
+    }
+    strokeWeight(5);
+    stroke(255);
+    rect(rect4X, rect4Y, recW, recH);
+    noStroke();
+
+    if (Over8) {
+      fill(fillcolor);
+    } else {
+      fill(rect2Color);
+    }
+    strokeWeight(5);
+    stroke(255);
+    rect(rect5X, rect5Y, recW, recH);
+    noStroke();
+
+    makeText("BogoSort", rect4X + recW/4, rect4Y + recH/2, 0);
+    makeText("HeapSort", rect5X + recW/4, rect5Y + recH/2, 0);
+  }
+
   //stroke(0);
 }
 
@@ -188,21 +232,41 @@ void update() {
       Over1 = true;
       Over2 = false;
       Over3 = false;
+      Over6 = false;
     } else if ( OverRect(rect2X, rect2Y) ) {
       Over2 = true;
       Over1 = false;
       Over3 = false;
+      Over6 = false;
     } else if ( OverRect(rect3X, rect3Y) ) {
       Over3 = true;
       Over2 = false;
       Over1 = false;
+      Over6 = false;
+    } else if (OverRect(rect6X, rect6Y)) {
+      Over3 = false;
+      Over2 = false;
+      Over1 = false;
+      Over6 = true;
     } else {
       Over1 = false;
       Over2 = false;
       Over3 = false;
     }
   }
-  if (state != 0) {  
+  if (state != 0) {
+    if (state == 10) {
+      if (OverRect(rect4X, rect4Y)) {
+        Over7 = true;
+        Over8 = false;
+      } else if (OverRect(rect5X, rect5Y)) {
+        Over7 = false;
+        Over8 = true;
+      } else {
+        Over7 = false;
+        Over8 = false;
+      }
+    }
     if (OverRect(rect4X, rect4Y)) {
       Over4 = true;
       Over5 = false;
@@ -227,14 +291,23 @@ void mouseClicked() {
     if (Over3) {
       state = 7;
     }
-  }
-  else if (state == 1 || state == 4 || state==7) {
+    if (Over6) {
+      state = 10;
+    }
+  } else if (state == 1 || state == 4 || state==7 || state == 11 || state == 14) {
     if (Over4) {
       state += 1;
     }
 
     if (Over5) {
       state += 2;
+    }
+  } else if (state ==10) {
+    if (Over7) {
+      state = 11;
+    }
+    if (Over8) {
+      state = 14;
     }
   }
 }

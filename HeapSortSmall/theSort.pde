@@ -1,14 +1,11 @@
 class theSort {
   
-  int[] arr;
+ int[] arr;
  ArrayList<int[]> order;
  ArrayList<Integer> count;
 
-  theSort(ArrayList<Integer> al) {
-    arr = new int[al.size()];
-    for (int x = 0; x < arr.length; x++) {
-      arr[x] = al.get(x);
-    }
+  theSort(int[] al) {
+    arr = al;
     order = new ArrayList<int[]>();
     count = new ArrayList<Integer>();
   }
@@ -35,7 +32,7 @@ class theSort {
       }
       part+=1;
     }
-    int counter = part;
+    int counter = part; //counts interations
     part-=1; //partition grew one too much, quick fix
     index = 0;//reuse it cuz why not
     //at this point, the array should be formatted as a max-heap

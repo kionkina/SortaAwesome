@@ -1,4 +1,4 @@
-ArrayList<Integer> arr;
+int[] arr;
 int arrSize;
 int boxWidth;
 int boxHeight;
@@ -9,10 +9,6 @@ float levelY;
 boolean filling;
 int i;
 boolean odd;
-int part;
-int index;
-boolean swapping;
-int maxChild;
 theSort arr1;
 int counter = 0;
 
@@ -34,10 +30,10 @@ void setup() {
   boxHeight = height/15;
   System.out.println("array size = " + arrSize);
   // ---------------- arr is populated -------------------------
-  arr = new ArrayList(arrSize);
+  arr = new int[arrSize];
   while (i != arrSize) {
     int toAdd = (int)(Math.random() * width);
-    arr.add((Integer)toAdd);
+    arr[i] = toAdd;
     System.out.println("adding " + toAdd);
 
     fill(225);
@@ -49,7 +45,7 @@ void setup() {
     System.out.println(i);
   }
   
-  arr1 = new theSort(arr);
+  arr1= new theSort(arr);
   arr1.heapSortV();
   
   if (i == arrSize) {
@@ -57,8 +53,8 @@ void setup() {
     rootX = width/2;
     levelX = rootX;
     levelY = rootY;
-    node(rootX + 20, rootY, arr.get(0), 0, false);
-    for (int p = 1; p < arr.size(); p++) {
+    node(rootX + 20, rootY, arr[0], 0, false);
+    for (int p = 1; p < arr.length; p++) {
       if (p% 2 != 0) {
         odd = true;
       } else { 
@@ -80,12 +76,10 @@ void setup() {
           levelX += 400/level + 10;
         }
       }
-      node(levelX, levelY, arr.get(p), level, odd);
+      node(levelX, levelY, arr[p], level, odd);
     }
   }
-  part = 0;
-  index = 0;
-  swapping = false;
+
 }
 
 
@@ -113,7 +107,7 @@ void draw() {
   
   
   node(rootX + 20, rootY, arr[0], 0, false);
-  for (int p = 1; p > part && p < arr.length; p++) {
+  for (int p = 1; p < arr.length; p++) {
     if (p% 2 != 0) {
       odd = true;
     } else { 
@@ -145,38 +139,6 @@ void draw() {
 
 //the array is sorted, but just return a reference for increased usefulness
 
-public int maxChildPos( int pos, int part) {
-  //3 cases:
-  //1. has less than 2 children in the heap:
-  if (((pos*2)+2) > part) {
-    //1a. has exactly one child:
-    if (((pos*2)+1) <= part) {
-      //returns the pos of the only child (ie the leftmost)
-      return (pos*2)+1;
-      //1b. else, there is no left child, return -1:
-    }
-    else {
-    return -1;
-    }
-  }
-  //2. 2 children:
-  //if the right child is greater, return the right child
- else if (arr.get((pos*2)+2) >= arr.get(pos*2)+1) {
-    return (pos*2)+2;
-  }
-  //else, the left child is greater, so return it
-  return (pos*2)+1;
-}
-
-
-private void swap( int pos1, int pos2 ) 
-{  
-   int a = arr.get(pos1);
-   int b = arr.get(pos2);
-   arr.set(pos1, b);
-   arr.set(pos2, a);
-  System.out.println("swapping " + pos1 + "and " + pos2);
-}
 
 
 

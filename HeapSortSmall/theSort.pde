@@ -2,12 +2,12 @@ class theSort {
   
  int[] arr;
  ArrayList<int[]> order;
- ArrayList<Integer> count;
+// ArrayList<Integer> count;
 
   theSort(int[] al) {
     arr = al;
     order = new ArrayList<int[]>();
-    count = new ArrayList<Integer>();
+    //count = new ArrayList<Integer>();
   }
 
   public void heapSortV() {
@@ -26,13 +26,13 @@ class theSort {
       while (arr[index] > arr[(index-1)/2]) {
         //promote the child by swapping with it's parent
         order.add(dupe(arr));
-        count.add(part);
+        //count.add(index);
         swap(arr, index, (index-1)/2);
         index = (index-1)/2;
       }
       part+=1;
     }
-    int counter = part; //counts interations
+    //int counter = part; //counts interations
     part-=1; //partition grew one too much, quick fix
     index = 0;//reuse it cuz why not
     //at this point, the array should be formatted as a max-heap
@@ -48,7 +48,7 @@ class theSort {
       while (maxChild != -1 && arr[index] < arr[maxChild]) {
         //swap with the biggest child unless it's bigger than it (caught by while):
         order.add(dupe(arr));
-        count.add(counter);
+        //count.add(counter);
         swap(arr, index, maxChild);
         //update index to be where minChild is
         index=maxChild;
@@ -58,7 +58,7 @@ class theSort {
       }
     }
     order.add(dupe(arr));
-    count.add(counter);
+    //count.add(counter);
   }
 
   public int maxChildPos(int[] roar, int pos, int part) {

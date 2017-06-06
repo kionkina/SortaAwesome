@@ -36,7 +36,7 @@ void setup() {
   textSize(32);
   fill(0, 50, 153);
   size(600, 600);
-  rectColor = color(50);
+  rectColor = color(138, 225, 115);
   rect2Color = color(50);
   rect3Color = color(50);
   fillcolor = color(255);
@@ -65,11 +65,11 @@ void draw() {
   if (state == 0) {
     update();
     if (Over1) {
-      fill(fillcolor);
+      fill(118,255,172);
     } else {
       fill(rectColor);
     }
-    strokeWeight(5);
+    strokeWeight(2);
     stroke(255);
     rect(rect1X, rect1Y, recW, recH);
     noStroke();
@@ -78,7 +78,7 @@ void draw() {
     } else {
       fill(rect2Color);
     }
-    strokeWeight(5);
+    strokeWeight(2);
     stroke(255);
     rect(rect2X, rect2Y, recW, recH);
     noStroke();
@@ -87,7 +87,7 @@ void draw() {
     } else {
       fill(rect3Color);
     }
-    strokeWeight(5);
+    strokeWeight(2);
     stroke(255);
     rect(rect3X, rect3Y, recW, recH);
     noStroke();
@@ -96,7 +96,7 @@ void draw() {
     } else {
       fill(rect3Color);
     }
-    strokeWeight(5);
+    strokeWeight(2);
     stroke(255);
     rect(rect6X, rect6Y, recW, 40);
     noStroke();

@@ -1,0 +1,6 @@
+Plan for the 6th:
+
+link ALL sorts to the title screens,
+update the title screen looks,
+test everything to make sure it runs smoothly
+and that eveything from our proposal is complete

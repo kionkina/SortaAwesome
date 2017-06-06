@@ -134,3 +134,9 @@ insertion sort.
 --------------------------------------------------------------
 - Karina started and worked on the small scale heapSort
 ==============================================================
+
+2017-06-05
+--------------------------------------------------------------
+- Karina, David, and Mark finished small scale heapSort
+- Mark added the second part of the home page.
+==============================================================

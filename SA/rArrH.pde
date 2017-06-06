@@ -1,10 +1,10 @@
-class rArr {
+class rArrHS {
   ArrayList<Integer> count;
   ArrayList<Rectangles[]> order;
   Rectangles[] rawr;
   int[] arr;
 
-  rArr(Rectangles[] roar) {// Constructor
+  rArrHS(Rectangles[] roar) {// Constructor
     setArr();
     rawr = dupe(roar);
 
@@ -99,10 +99,10 @@ class rArr {
 
 
 
-  void draw(int x) {
+  void drawH(int x) {
     for (int i  = 0; i < order.get(x).length; i++) {
       Rectangles r = order.get(x)[i];
-      r.draw(i*3, 3, count.get(x) == i);
+      r.drawRB(i*3, 3, count.get(x) == i);
     }
   }
 
@@ -113,4 +113,21 @@ class rArr {
     roar[a] = roar[b];
     roar[b] = temp;
   }
+  
+  void setArr() { // makes an array with randomized rectangle heights
+  arr = new int[width];
+  double scale = height/ width;
+  for (int x = 0; x < arr.length; x++) {
+    arr[x] = (int) (x*scale);
+  }
+  int randomIndex;
+  for ( int i = arr.length-1; i > 0; i-- ) {
+    //pick an index at random
+    randomIndex = (int)( (i+1) * Math.random() );
+    //swap the values at position i and randomIndex
+    int temp = arr[i];
+    arr[i] = arr[randomIndex];
+    arr[randomIndex] = temp;
+  }
+}
 } 

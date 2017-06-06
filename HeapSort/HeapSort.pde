@@ -1,5 +1,5 @@
 int counter;
-rArr rects;
+rArrHS rects;
 int[] arr;
 
 void setup() {
@@ -12,7 +12,7 @@ void setup() {
   for (int x = 0; x < temp.length; x++) {
     temp[x] = new Rectangles( x*3, height - arr[x], 3, arr[x], 255 );
   }
-  rects = new rArr( temp ); //
+  rects = new rArrHS( temp ); //
 }
 
 void draw() {
@@ -44,11 +44,5 @@ void setArr() { // makes an array with randomized rectangle heights
     int temp = arr[i];
     arr[i] = arr[randomIndex];
     arr[randomIndex] = temp;
-  }
-}
-
-void keyPressed() {
-  if (keyCode == DELETE) {
-    setup();
   }
 }

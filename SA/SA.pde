@@ -25,6 +25,7 @@ InsertionSortSmall insS;
 SelectionSortSmall selS;
 BubbleSortSmall bubS;
 BogoSortLarge bogL;
+HeapSortLarge heaL;
 
 void setup() {
   frameRate(60);
@@ -225,6 +226,15 @@ void draw() {
       setup = false;
     } else {
       bogL.drawBGL();
+    }
+  }
+  
+  if (state == 16) {
+    if (setup) {
+      heaL = new HeapSortLarge();
+      setup = false;
+    } else {
+      heaL.drawHS();
     }
   }
     

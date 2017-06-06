@@ -115,7 +115,7 @@ class InsertionSortSmall {
       fill(0);
       //text 
       text(Integer.toString(arr[firstBox]), 25 + boxWidth*firstBox + firstBox*3, height/2 - boxHeight/2, boxWidth, boxHeight);
-      fill(225, 139, 225);
+      fill(225, 1, 225);
       rect(25 + boxWidth*secondBox + secondBox*3, height/2 - boxHeight/2, boxWidth, boxHeight);
       //text
       fill(0);

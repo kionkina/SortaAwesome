@@ -26,6 +26,7 @@ SelectionSortSmall selS;
 BubbleSortSmall bubS;
 BogoSortLarge bogL;
 HeapSortLarge heaL;
+HeapSortSmall heaS;
 
 void setup() {
   frameRate(60);
@@ -65,7 +66,7 @@ void draw() {
   if (state == 0) {
     update();
     if (Over1) {
-      fill(168,100,252);
+      fill(168, 100, 252);
     } else {
       fill(rectColor);
     }
@@ -92,7 +93,7 @@ void draw() {
     rect(rect3X, rect3Y, recW, recH);
     noStroke();
     if (Over6) {
-      fill(0,200,204);
+      fill(0, 200, 204);
     } else {
       fill(128, 200, 200);
     }
@@ -115,9 +116,9 @@ void draw() {
     background(0);
 
     if (Over4) {
-          fill(168,100,252);
+      fill(168, 100, 252);
     } else {
-  
+
       fill(rectColor);
     }
     strokeWeight(2);
@@ -127,7 +128,6 @@ void draw() {
 
     if (Over5) {
       fill(0, 255, 200);
-      
     } else {
       fill(rect2Color);
     }
@@ -199,9 +199,9 @@ void draw() {
     background(0);
 
     if (Over7) {
-          fill(168,100,252);
+      fill(168, 100, 252);
     } else {
-  
+
       fill(rectColor);
     }
     strokeWeight(2);
@@ -209,9 +209,8 @@ void draw() {
     rect(rect4X, rect4Y, recW, recH);
     noStroke();
 
-     if (Over8) {
+    if (Over8) {
       fill(0, 255, 200);
-      
     } else {
       fill(rect2Color);
     }
@@ -223,7 +222,7 @@ void draw() {
     makeText("BogoSort", rect4X + recW/4, rect4Y + recH/2, 0);
     makeText("HeapSort", rect5X + recW/4, rect5Y + recH/2, 0);
   }
-  
+
   if (state == 13) {
     if (setup) {
       bogL = new BogoSortLarge();
@@ -232,7 +231,16 @@ void draw() {
       bogL.drawBGL();
     }
   }
-  
+
+  if (state ==15) {
+    if (setup) {
+      heaS = new HeapSortSmall();
+      setup = false;
+    } else {
+      heaS.drawHSS();
+    }
+  }
+
   if (state == 16) {
     if (setup) {
       heaL = new HeapSortLarge();
@@ -241,7 +249,7 @@ void draw() {
       heaL.drawHS();
     }
   }
-    
+
 
   //stroke(0);
 }

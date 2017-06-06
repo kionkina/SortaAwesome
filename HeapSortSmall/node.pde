@@ -1,9 +1,11 @@
 float ex;
 float why;
 
+
 void node(float x, float y, int num, float level, boolean odd) {
   ex = x;
   why = y;
+ 
 
   if (level > 0) {
 

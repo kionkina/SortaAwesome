@@ -8,7 +8,6 @@ float levelX;
 float levelY;
 boolean filling;
 int i;
-int x;
 boolean odd;
 theSort arr1;
 int counter = 0;
@@ -25,7 +24,7 @@ void setup() {
   noStroke();
   background(0);
   size(600, 600);
-  arrSize = (int) ((Math.random() * 6) + 5 );
+  arrSize = (int) ((Math.random() * 10) + 5 );
   //nodes = new int[arrSize][2];
   boxWidth = (width - ((2*arrSize) + 100)) / arrSize;
   boxHeight = height/15;
@@ -88,14 +87,13 @@ void setup() {
 
 
 void draw() {
-  if (x < arr1.order.size()){
-  display( arr1.order.get(x));
-  x++;
+  if (counter < arr1.order.size()){
+  display( arr1.order.get(counter));
+  counter++;
   }
 }
 
-
-  void display(int[] arr) {
+void display(int[] arr) {
   //---------------------------------------display---------------------
   background(0);
   noStroke();
@@ -109,7 +107,8 @@ void draw() {
   
   
   node(rootX + 20, rootY, arr[0], 0, false);
-  for (int p = 1; p < arr.length; p++) {
+  for (int p = 1; p < arr1.arr.length &&  arr1.nyoom  && p < (arr1.sorted.get(counter)) ; p++) {
+    
     if (p% 2 != 0) {
       odd = true;
     } else { 
@@ -134,12 +133,8 @@ void draw() {
     }
     node(levelX, levelY, arr[p], level, odd);
   }
+  
 }
-
-
-
-
-//the array is sorted, but just return a reference for increased usefulness
 
 
 

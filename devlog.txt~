@@ -47,11 +47,10 @@ a useful thing!
 --------------------------------------------------------------
 Karina:
 - setup(), draw(), update(), mousePressed(), OverRect(x, y)
-- added 3 rectangles for sort selections
 - color changes when mouse is on the boxes --> update(), overRect() and draw()
 - mousePressed() changes the state to 0,1,2 which can be used 
 for the sort visualizations (determines which sort is shown)
-
+- title screen layout 
 ==============================================================
 
 2017-05-22
@@ -96,13 +95,15 @@ insertion sort.
 2017-05-29
 --------------------------------------------------------------
 - Karina finished small scale insertion sort
+- Karina began working on small scale selection sort 
 - David began work on large scale heapSort
 - Mark began linking sorts to title screen
 ==============================================================
 
 2017-05-30
 --------------------------------------------------------------
-- Karina finished small scale selection sort and began work on bubble sort
+- Karina finished small scale selection sort and began work on 
+small scale bubble sort
 - David continued work on large scale heapsort
 - Mark continued linking sorts to title screen
 ==============================================================
@@ -133,10 +134,24 @@ insertion sort.
 2017-06-04
 --------------------------------------------------------------
 - Karina started and worked on the small scale heapSort
+- finished setup and display methods, worked on changing 
+java sorting code to fit processing draw() method   
 ==============================================================
 
 2017-06-05
 --------------------------------------------------------------
 - Karina, David, and Mark finished small scale heapSort
+by creating copies of the array instead of running the sort
+in the draw method. 
 - Mark added the second part of the home page.
+- Karina updated small scale heapSort so that the sorted
+leafs would disappear 
+==============================================================
+
+2017-06-06
+--------------------------------------------------------------
+- Karina, David, and Mark work on title screen in class
+- Karina changes colors to make title screen more visually appealing
+- Mark linked all non-O(n^2) sorts to title screen
+- Mark and Karina finished flowchart and uml
 ==============================================================

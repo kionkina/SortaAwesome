@@ -27,10 +27,12 @@ BubbleSortSmall bubS;
 BogoSortLarge bogL;
 HeapSortLarge heaL;
 HeapSortSmall heaS;
+BogoSortSmall bogS;
 
 void setup() {
   frameRate(60);
   background(color(0));
+  textSize(20);
   textSize(40);
   fill(225);
   text("Sorta Awesome Visualizer", 47, 80); 
@@ -111,7 +113,6 @@ void draw() {
 
 
   if (state == 1 || state == 4 || state == 7 || state == 11 || state == 14) {
-
     update();
     background(0);
 
@@ -221,6 +222,15 @@ void draw() {
 
     makeText("BogoSort", rect4X + recW/4, rect4Y + recH/2, 0);
     makeText("HeapSort", rect5X + recW/4, rect5Y + recH/2, 0);
+  }
+
+  if (state == 12) {
+    if (setup) {
+      bogS = new BogoSortSmall();
+      setup = false;
+    } else {
+      bogS.drawBGS();
+    }
   }
 
   if (state == 13) {

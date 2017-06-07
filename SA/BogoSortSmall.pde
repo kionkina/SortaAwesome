@@ -54,11 +54,11 @@ class BogoSortSmall {
     firstBox = 0; 
     secondBox = 0;
     swapping = false;
-    frameRate(1000000000);
+    frameRate(1000000);
     background(0);
     fill(225);
     textSize(25);
-    text("FrameRate : 1,000,000,000", 25, 40);
+    text("FrameRate : 1,000,000", 25, 40);
     size(600, 600);
     arrSize = (int) ((Math.random() * 5) + 6);
     boxWidth = (width - (50 + 2*arrSize)) / arrSize;

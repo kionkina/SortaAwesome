@@ -7,6 +7,8 @@ David Frid, Karina Ionkina, Mark Shafran
 Our project has made a visualizer for multiple sorting algorithms we have developed this semester. The user will be able to choose
 the sort they wish to see visualized. They will then be presented with the option of seeing a small scale array get sorted using the algorithm (visualized using boxes with values in the place of an array, and done very slowly) or a large scale array get sorted
 (visualized using 300 rectangles get sorted using the algorithm based on their height).
+If the user wishes to return to the title screen, they must press 'M'
+If the user wishes to reset the sort they are watching, they must press 'R'
 
 ### How it works
 #### Large Scale

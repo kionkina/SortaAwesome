@@ -147,3 +147,11 @@ in the draw method.
 - Karina updated small scale heapSort so that the sorted
 leafs would disappear 
 ==============================================================
+
+2017-06-06
+--------------------------------------------------------------
+- Karina, David, and Mark work on title screen in class
+- Karina changes colors to make title screen more visually appealing
+- Mark linked all non-O(n^2) sorts to title screen
+- Mark and Karina finished flowchart and uml
+==============================================================

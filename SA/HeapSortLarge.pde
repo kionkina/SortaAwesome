@@ -28,10 +28,6 @@ class HeapSortLarge {
     }
   }
 
-
-  void sort() {
-  }
-
   void setArr() { // makes an array with randomized rectangle heights
     arr = new int[width];
     double scale = height/ width;

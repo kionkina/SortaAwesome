@@ -28,6 +28,12 @@ in the draw() method because it'll cover the
 text in the setup() method and refresh each
 time...
 
+06-07-2016
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+My home machine wasn't linked with my stuy.edu email,
+so all the commits were stored under an 
+unverified email address. I wish I had 
+realized this earlier. 
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

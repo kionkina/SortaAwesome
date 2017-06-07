@@ -36,7 +36,6 @@ boolean nyoom;
         order.add(dupe(arr));
 
         sorted.add(part);
-   
         swap(arr, index, (index-1)/2);
         index = (index-1)/2;
       }
@@ -70,6 +69,7 @@ boolean nyoom;
    
     order.add(dupe(arr));
     sorted.add(part);
+
     }
   }
 

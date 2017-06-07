@@ -74,7 +74,7 @@ class HeapSortSmall {
             levelX += 400/level + 10;
           }
         }
-        node(levelX, levelY, arr[p], level, odd);
+       // node(levelX, levelY, arr[p], level, odd);
       }
     }
   }
